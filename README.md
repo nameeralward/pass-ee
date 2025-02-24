@@ -1,6 +1,6 @@
 # passEE Website
 
-The official website for passEE - A comprehensive study companion app for pharmacy professionals preparing for the PEBC Evaluating Exam.
+The official website for passEE - A comprehensive study companion app for pharmacy professionals preparing for the PEBC Evaluating Exam!
 
 ## Overview
 
