@@ -1,0 +1,13 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "passEE",
+  "url": "https://pass-ee.ca/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://pass-ee.ca/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script> 
