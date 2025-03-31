@@ -1,0 +1,20 @@
+<img src="university-logo.png" alt="University Logo" class="university-logo" width="150" height="60" loading="lazy"> 
+
+<style>
+/* Critical CSS for above-the-fold content */
+body {margin: 0; font-family: Arial, sans-serif;}
+.top-bar {background-color: #f8f9fa; width: 100%;}
+.header-content {display: flex; align-items: center; justify-content: space-between; padding: 15px 20px;}
+.logo-container {display: flex; align-items: center;}
+.university-logo {max-width: 150px; height: auto; margin-right: 15px;}
+.site-name {margin: 0; font-size: 1.8rem; color: #2c3e50;}
+.site-description {font-size: 0.9rem; color: #7f8c8d;}
+nav {display: flex; flex-wrap: wrap;}
+nav a {text-decoration: none; color: #34495e; margin: 0 10px; padding: 5px 0;}
+</style>
+<link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'"> 
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"> 
+<script src="faq.js" defer></script> 
+<meta name="theme-color" content="#ffffff"> 
