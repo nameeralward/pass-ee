@@ -23,3 +23,8 @@ nav a {text-decoration: none; color: #34495e; margin: 0 10px; padding: 5px 0;}
 <div class="disclaimer-box">
   <p><strong>Important:</strong> passEE is an independent study resource created by pharmacy professionals to help candidates prepare for the PEBC Evaluating Exam. We are not affiliated with, endorsed by, or connected to the Pharmacy Examining Board of Canada. All information is provided for educational purposes only.</p>
 </div> 
+
+<!-- Update your copyright footer -->
+<div class="copyright">
+    © 2024-2025 passEE. All rights reserved. passEE is an independent study resource and is not affiliated with, endorsed by, or connected to the Pharmacy Examining Board of Canada. "PEBC" and "Pharmacy Examining Board of Canada" are trademarks of the Pharmacy Examining Board of Canada.
+</div> 

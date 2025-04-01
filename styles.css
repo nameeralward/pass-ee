@@ -1463,3 +1463,22 @@ footer {
     object-fit: cover;
     border-radius: 8px 8px 0 0;
 }
+
+/* Add this to your CSS file */
+.disclaimer-box {
+  background-color: #f8f9fa;
+  border-left: 4px solid #2c3e50;
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.content-disclaimer {
+  background-color: #f1f8ff;
+  border: 1px solid #d0e3ff;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
