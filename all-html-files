@@ -18,3 +18,8 @@ nav a {text-decoration: none; color: #34495e; margin: 0 10px; padding: 5px 0;}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"> 
 <script src="faq.js" defer></script> 
 <meta name="theme-color" content="#ffffff"> 
+
+<!-- Add this disclaimer to all pages with PEBC content -->
+<div class="disclaimer-box">
+  <p><strong>Important:</strong> passEE is an independent study resource created by pharmacy professionals to help candidates prepare for the PEBC Evaluating Exam. We are not affiliated with, endorsed by, or connected to the Pharmacy Examining Board of Canada. All information is provided for educational purposes only.</p>
+</div> 
