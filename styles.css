@@ -1720,23 +1720,23 @@ footer {
 }
 
 .qualifying-exam-page .hero-section h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    animation: celebrateIn 1s ease-out;
+    font-weight: 700;
 }
 
 .qualifying-exam-page .hero-section h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 1.5rem;
     color: white;
-    animation: fadeIn 1.2s ease-out;
+    font-weight: 400;
 }
 
 .qualifying-exam-page .hero-section p {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto 2rem;
-    animation: fadeIn 1.5s ease-out;
+    line-height: 1.6;
 }
 
 /* Animations for dramatic effect */
@@ -1890,4 +1890,33 @@ footer {
     .qualifying-exam-page .testimonial-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Ensure buttons use the purple color scheme */
+.qualifying-exam-page .cta-button {
+    background-color: var(--accent-color);
+    border: 2px solid transparent;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.qualifying-exam-page .cta-button:hover {
+    background-color: white;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.qualifying-exam-page .cta-button.large {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+}
+
+.qualifying-exam-page .cta-button.large:hover {
+    background-color: white;
+    color: var(--primary-color);
 }
