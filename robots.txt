@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pass-ee.ca/sitemap.xml 
+Sitemap: https://pass-ee.ca/sitemap.xml
+
+# Disallow duplicate content
+Disallow: /old-pages/ 

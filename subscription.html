@@ -44,6 +44,63 @@
                     </div>
                 </div>
             </nav>
+
+            <!-- Hamburger menu for mobile -->
+            <button class="hamburger-menu" aria-label="Open navigation menu">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+
+            <!-- Add mobile navigation after the header-content div -->
+            <!-- Mobile navigation -->
+            <div class="mobile-nav">
+                <div class="mobile-nav-header">
+                    <div class="logo-container">
+                        <img src="university-logo.png" alt="University Logo" class="university-logo" width="40" height="40">
+                        <h2 class="site-name">passEE</h2>
+                    </div>
+                    <button class="mobile-nav-close" aria-label="Close navigation menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="mobile-nav-menu">
+                    <div class="mobile-nav-item">
+                        <a href="/">Home</a>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <a href="pebc-ee-guide.html">PEBC EE Guide</a>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <a href="subscription.html">Subscription</a>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <a href="support.html">Support</a>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <a href="blog-index.html">Blog</a>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <a href="about.html">About Us</a>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <div class="mobile-nav-dropdown">
+                            <a href="#">Policies</a>
+                            <button class="mobile-dropdown-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="mobile-nav-submenu">
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="terms-of-service.html">Terms of Service</a>
+                            <a href="device-switching.html">Device Switching</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -125,5 +182,8 @@
             © 2025 passEE. All rights reserved. passEE is not affiliated with the Pharmacy Examining Board of Canada. "PEBC" and "Pharmacy Examining Board of Canada" are trademarks of the Pharmacy Examining Board of Canada.
         </div>
     </footer>
+
+    <!-- Add script tag before closing body tag -->
+    <script src="mobile-nav.js"></script>
 </body>
 </html> 
