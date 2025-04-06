@@ -1660,3 +1660,234 @@ footer {
 .mobile-nav-backdrop {
     display: none !important;
 }
+
+/* Floating button for passMCQ promotion - Purple theme */
+.floating-mcq-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: #6a3de8; /* Purple color for passMCQ */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(106, 61, 232, 0.3);
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 99;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.floating-mcq-button:hover {
+    background-color: white;
+    color: #6a3de8; /* Purple color for passMCQ */
+    border-color: #6a3de8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(106, 61, 232, 0.25);
+}
+
+.floating-mcq-button i {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .floating-mcq-button {
+        bottom: 20px;
+        left: 20px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Add these styles for the qualifying exam page */
+.qualifying-exam-page {
+    --primary-color: #6a3de8;
+    --secondary-color: #8a68ff;
+    --accent-color: #5e35b1;
+    --text-on-primary: #ffffff;
+    --light-purple: #f5f0ff;
+    --purple-gradient: linear-gradient(135deg, #6a3de8, #8a68ff);
+}
+
+.qualifying-exam-page .hero-section {
+    background: #4a2799; /* Dark purple background */
+    color: var(--text-on-primary);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.qualifying-exam-page .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    animation: celebrateIn 1s ease-out;
+}
+
+.qualifying-exam-page .hero-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.qualifying-exam-page .hero-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Animations for dramatic effect */
+@keyframes celebrateIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(-20px);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .qualifying-exam-page .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    .qualifying-exam-page .hero-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .qualifying-exam-page .hero-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Updated styles for the brand transition in the header */
+.qualifying-exam-page .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Consistent spacing between logo and text */
+}
+
+.qualifying-exam-page .site-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.qualifying-exam-page .site-name {
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.brand-transition {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+/* Make both icons the same size with consistent spacing */
+.university-logo, .passmcq-icon {
+    height: 2.5rem !important;
+    width: auto;
+}
+
+.passmcq-icon {
+    margin: 0 5px 0 10px; /* Increased left margin to match university logo spacing */
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .site-name {
+        font-size: 1.2rem;
+    }
+    
+    .university-logo, .passmcq-icon {
+        height: 2rem !important;
+    }
+}
+
+/* Improved layout for feature cards and testimonials on desktop */
+.qualifying-exam-page .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.qualifying-exam-page .feature-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    border-top: 4px solid var(--primary-color);
+    width: 100%;
+}
+
+.qualifying-exam-page .feature-details {
+    width: 100%;
+}
+
+.qualifying-exam-page .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1.5rem auto;
+}
+
+.qualifying-exam-page .testimonial-card {
+    background-color: var(--light-purple);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (min-width: 992px) {
+    .qualifying-exam-page .content-block {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    
+    .qualifying-exam-page .feature-card {
+        padding: 2.5rem;
+    }
+    
+    .qualifying-exam-page .testimonial-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .qualifying-exam-page .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
