@@ -1661,15 +1661,15 @@ footer {
     display: none !important;
 }
 
-/* Update floating button to match site color palette */
+/* Update floating button to have iOS-style rounded corners */
 .floating-mcq-button {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background-color: var(--cta-color); /* Coral pink from your palette */
-    color: var(--dark-accent); /* Penn blue for text */
+    background-color: var(--cta-color);
+    color: var(--dark-accent);
     padding: 12px 15px;
-    border-radius: var(--border-radius);
+    border-radius: 16px;
     text-decoration: none;
     font-weight: 600;
     box-shadow: var(--box-shadow);
@@ -1702,7 +1702,7 @@ footer {
 
 .floating-mcq-button:hover {
     background-color: white;
-    color: var(--accent-color); /* Royal purple on hover */
+    color: var(--accent-color);
     border-color: var(--accent-color);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(133, 92, 166, 0.25);
@@ -1741,7 +1741,7 @@ footer {
 .floating-mcq-button {
     background-color: var(--cta-color);
     color: var(--dark-accent);
-    border-radius: var(--border-radius);
+    border-radius: 16px;
     box-shadow: var(--box-shadow);
     border: 2px solid transparent;
 }
@@ -1948,4 +1948,34 @@ footer {
     margin-bottom: 1.5rem;
     color: var(--highlight-color); /* Using tea-rose-red for better contrast */
     font-weight: 400;
+}
+
+/* Add a prominent passMCQ link to the mobile navigation */
+.mobile-nav-mcq-link {
+    display: block;
+    margin: 20px 15px;
+    padding: 12px 15px;
+    background-color: var(--cta-color);
+    color: var(--dark-accent);
+    text-align: center;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-mcq-link i {
+    margin-right: 8px;
+    color: var(--dark-accent);
+}
+
+.mobile-nav-mcq-link:hover {
+    background-color: white;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.mobile-nav-mcq-link:hover i {
+    color: var(--accent-color);
 }
