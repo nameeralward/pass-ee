@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PassEE - Special Promotions and Referral Program">
+    <title>passEE - Promotions & Referrals</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+        </div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="university-logo.png" alt="University Logo" class="university-logo">
+                <div class="site-title">
+                    <h1 class="site-name">passEE</h1>
+                    <span class="site-description">Your trusted partner for PEBC Evaluating Exam preparation.</span>
+                </div>
+            </div>
+            
+            <!-- Hamburger menu for mobile -->
+            <button class="hamburger-menu" aria-label="Open navigation menu">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+            
+            <nav>
+                <a href="/">Home</a>
+                <a href="pebc-ee-guide.html">PEBC EE Guide</a>
+                <a href="subscription.html">Subscription</a>
+                <a href="promotions.html">Promotions</a>
+                <a href="support.html">Support</a>
+                <a href="faq.html">FAQ</a>
+                <a href="blog-index.html">Blog</a>
+                <a href="about.html">About Us</a>
+                <div class="dropdown">
+                    <a href="#">Policies</a>
+                    <div class="dropdown-content">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="device-switching.html">Device Switching</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Mobile navigation -->
+        <div class="mobile-nav">
+            <div class="mobile-nav-header">
+                <div class="logo-container">
+                    <img src="university-logo.png" alt="University Logo" class="university-logo" width="40" height="40">
+                    <h2 class="site-name">passEE</h2>
+                </div>
+                <button class="mobile-nav-close" aria-label="Close navigation menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="mobile-nav-menu">
+                <div class="mobile-nav-item">
+                    <a href="/">Home</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="pebc-ee-guide.html">PEBC EE Guide</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="subscription.html">Subscription</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="promotions.html">Promotions</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="support.html">Support</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="blog-index.html">Blog</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-dropdown">
+                        <a href="#">Policies</a>
+                        <button class="mobile-dropdown-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="mobile-nav-submenu">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="device-switching.html">Device Switching</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item" style="margin-top: 20px;">
+                    <a href="qualifying-exam.html" class="mobile-nav-mcq-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        Passed EE? Get passMCQ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="policy-section">
+            <h2><i class="fas fa-gift"></i> Special Promotions</h2>
+            
+            <div class="content-block">
+                <p>At passEE, we believe in the power of community learning. Our referral program and special promotions are designed to help you and your friends prepare for the PEBC Evaluating Exam together.</p>
+            </div>
+            
+            <div class="promotion-grid">
+                <!-- Active promotion with countdown timer -->
+                <div class="promotion-card active">
+                    <div class="promotion-badge">
+                        <span>ACTIVE</span>
+                    </div>
+                    <h3><i class="fas fa-users"></i> Friend Referral Program</h3>
+                    <div class="promotion-details">
+                        <p>Subscribe to passEE and receive a unique promo code to share with a friend. When they use your code, they'll get <strong>completely free access</strong> to passEE!</p>
+                        <ul>
+                            <li>You subscribe to passEE</li>
+                            <li>We email you a unique promo code</li>
+                            <li>Share the code with a friend</li>
+                            <li>Your friend gets <strong>free access</strong></li>
+                            <li>You both succeed together!</li>
+                        </ul>
+                        <div class="promotion-timer">
+                            <p>This promotion ends in:</p>
+                            <div class="countdown-timer" id="referral-countdown">
+                                <div class="countdown-unit">
+                                    <span class="days">--</span>
+                                    <span class="label">Days</span>
+                                </div>
+                                <div class="countdown-unit">
+                                    <span class="hours">--</span>
+                                    <span class="label">Hours</span>
+                                </div>
+                                <div class="countdown-unit">
+                                    <span class="minutes">--</span>
+                                    <span class="label">Minutes</span>
+                                </div>
+                                <div class="countdown-unit">
+                                    <span class="seconds">--</span>
+                                    <span class="label">Seconds</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cta-button-container">
+                            <a href="subscription.html" class="cta-button">Subscribe Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Update the Summer promotion to remove specific date -->
+                <div class="promotion-card upcoming">
+                    <div class="promotion-badge">
+                        <span>COMING SOON</span>
+                    </div>
+                    <h3><i class="fas fa-calendar-alt"></i> Summer Extended Access</h3>
+                    <div class="promotion-details">
+                        <p>Our upcoming Summer promotion will include extended access to passEE with special pricing for the exam season.</p>
+                        <p class="promotion-date">Coming this summer</p>
+                    </div>
+                </div>
+                
+                <!-- Past promotion (greyed out) -->
+                <div class="promotion-card expired">
+                    <div class="promotion-badge">
+                        <span>EXPIRED</span>
+                    </div>
+                    <h3><i class="fas fa-clock"></i> Early Bird Access</h3>
+                    <div class="promotion-details">
+                        <p>Our Early Bird promotion offered discounted access to passEE for early subscribers.</p>
+                        <p class="promotion-date">Ended January 15, 2025</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-block">
+                <h3><i class="fas fa-question-circle"></i> How It Works</h3>
+                <div class="how-it-works">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Subscribe to passEE</h4>
+                            <p>Purchase any subscription plan through the App Store.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Receive Your Promo Code</h4>
+                            <p>We'll email a unique promotional code to the email associated with your account.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Share With a Friend</h4>
+                            <p>Send the code to a friend who's also preparing for the PEBC Evaluating Exam.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Friend Redeems Code</h4>
+                            <p>Your friend enters the code during their subscription process to receive the discount.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-block note-section">
+                <h3><i class="fas fa-info-circle"></i> Important Notes</h3>
+                <ul>
+                    <li>Promotional codes are valid for 30 days from the date of issue</li>
+                    <li>Each code can only be used once</li>
+                    <li>Discounts apply to the initial subscription period only</li>
+                    <li>Promotions cannot be combined with other offers</li>
+                    <li>We reserve the right to modify or end promotions at any time</li>
+                </ul>
+            </div>
+            
+            <div class="content-block">
+                <h3><i class="fas fa-envelope"></i> Questions About Promotions?</h3>
+                <p>If you have any questions about our promotions or need assistance with a promotional code, please contact our support team.</p>
+                <div class="cta-button-container">
+                    <a href="mailto:support@npd-pass.com" class="cta-button">Contact Support</a>
+                </div>
+            </div>
+
+            <div class="content-block note-section">
+                <h3><i class="fas fa-exclamation-circle"></i> Important Note for Apple Sign-In Users</h3>
+                <p>If you're using Sign in with Apple, please make sure to share your email address when you sign up. Apple gives you the option to hide your email, but we need your actual email to send you promotion codes.</p>
+                <p>If you've already signed up with a hidden Apple email address and would like to receive promotions, please email us at <a href="mailto:support@npd-pass.com">support@npd-pass.com</a> from your preferred email address so we can update your account.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="pebc-ee-guide.html">PEBC EE Guide</a></li>
+                    <li><a href="subscription.html">Subscription</a></li>
+                    <li><a href="promotions.html">Promotions</a></li>
+                    <li><a href="blog-index.html">Blog</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:support@npd-pass.com"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 passEE. All rights reserved. passEE is not affiliated with the Pharmacy Examining Board of Canada. "PEBC" and "Pharmacy Examining Board of Canada" are trademarks of the Pharmacy Examining Board of Canada.
+        </div>
+    </footer>
+
+    <!-- Floating button for passMCQ -->
+    <a href="qualifying-exam.html" class="floating-mcq-button">
+        <i class="fas fa-graduation-cap"></i>
+        Passed EE? Get passMCQ
+    </a>
+    
+    <script src="mobile-nav.js"></script>
+    
+    <!-- Update the countdown timer script with a fixed end date -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set a specific end date: April 9, 2025 at 4:00 PM
+            const countdownDate = new Date("April 9, 2025 16:00:00").getTime();
+            
+            // Function to update the countdown
+            function updateCountdown() {
+                // Get current date and time
+                const now = new Date().getTime();
+                
+                // Find the distance between now and the countdown date
+                const distance = countdownDate - now;
+                
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Display the result
+                document.querySelector('.countdown-timer .days').textContent = days;
+                document.querySelector('.countdown-timer .hours').textContent = hours < 10 ? '0' + hours : hours;
+                document.querySelector('.countdown-timer .minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+                document.querySelector('.countdown-timer .seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+                
+                // If the countdown is finished, change the promotion card to expired
+                if (distance < 0) {
+                    clearInterval(countdownTimer);
+                    const promotionCard = document.querySelector('.promotion-card.active');
+                    promotionCard.classList.remove('active');
+                    promotionCard.classList.add('expired');
+                    promotionCard.querySelector('.promotion-badge span').textContent = 'EXPIRED';
+                    document.querySelector('.countdown-timer').innerHTML = '<p>This promotion has ended</p>';
+                }
+            }
+            
+            // Update immediately when page loads
+            updateCountdown();
+            
+            // Then update every second
+            const countdownTimer = setInterval(updateCountdown, 1000);
+        });
+    </script>
+</body>
+</html> 

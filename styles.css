@@ -1979,3 +1979,191 @@ footer {
 .mobile-nav-mcq-link:hover i {
     color: var(--accent-color);
 }
+
+/* Promotions Page Styles */
+.promotion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.promotion-card {
+    position: relative;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.promotion-card.active {
+    background-color: white;
+    border: 2px solid var(--accent-color);
+}
+
+.promotion-card.upcoming {
+    background-color: #f8f8f8;
+    border: 2px dashed #ccc;
+    opacity: 0.8;
+}
+
+.promotion-card.expired {
+    background-color: #f8f8f8;
+    border: 2px solid #ddd;
+    opacity: 0.7;
+}
+
+.promotion-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.promotion-card.upcoming .promotion-badge {
+    background-color: #6c757d;
+}
+
+.promotion-card.expired .promotion-badge {
+    background-color: #dc3545;
+}
+
+.promotion-card h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.promotion-details ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.promotion-details li {
+    margin-bottom: 0.5rem;
+}
+
+.promotion-date {
+    font-style: italic;
+    margin-top: 1rem;
+    color: #6c757d;
+}
+
+.promotion-timer {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-unit span {
+    display: block;
+}
+
+.countdown-unit .days,
+.countdown-unit .hours,
+.countdown-unit .minutes,
+.countdown-unit .seconds {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    padding: 0.5rem;
+    min-width: 2.5rem;
+    text-align: center;
+}
+
+.countdown-unit .label {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    color: #6c757d;
+}
+
+.how-it-works {
+    margin: 2rem 0;
+}
+
+.step {
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    background-color: var(--accent-color);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex-grow: 1;
+}
+
+.step-content h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .promotion-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .countdown-timer {
+        gap: 0.5rem;
+    }
+    
+    .countdown-unit .days,
+    .countdown-unit .hours,
+    .countdown-unit .minutes,
+    .countdown-unit .seconds {
+        font-size: 1.4rem;
+        min-width: 2rem;
+    }
+}
+
+/* Update note section alignment */
+.note-section h3 {
+    text-align: left;
+}
+
+.note-section ul {
+    text-align: left;
+    padding-left: 1.5rem;
+}
+
+.note-section li {
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+/* Add this to your CSS file */
+.note-section p {
+    text-align: left !important;
+}
