@@ -1661,82 +1661,104 @@ footer {
     display: none !important;
 }
 
-/* Floating button for passMCQ promotion - Purple theme */
+/* Update floating button to match site color palette */
 .floating-mcq-button {
     position: fixed;
-    bottom: 30px;
-    left: 30px;
-    background-color: #6a3de8; /* Purple color for passMCQ */
-    color: white;
-    padding: 12px 20px;
-    border-radius: 50px;
-    box-shadow: 0 4px 12px rgba(106, 61, 232, 0.3);
-    font-weight: bold;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--cta-color); /* Coral pink from your palette */
+    color: var(--dark-accent); /* Penn blue for text */
+    padding: 12px 15px;
+    border-radius: var(--border-radius);
     text-decoration: none;
+    font-weight: 600;
+    box-shadow: var(--box-shadow);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    z-index: 99;
+    text-align: center;
+    z-index: 1000;
     transition: all 0.3s ease;
+    line-height: 1.3;
+    width: 140px;
     border: 2px solid transparent;
+}
+
+.floating-mcq-button i {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: var(--dark-accent);
+}
+
+.floating-mcq-button span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.floating-mcq-button span:last-child {
+    margin-top: 2px;
 }
 
 .floating-mcq-button:hover {
     background-color: white;
-    color: #6a3de8; /* Purple color for passMCQ */
-    border-color: #6a3de8;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(106, 61, 232, 0.25);
+    color: var(--accent-color); /* Royal purple on hover */
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(133, 92, 166, 0.25);
+}
+
+.floating-mcq-button:hover i {
+    color: var(--accent-color);
+}
+
+/* Update qualifying exam page to match passMCQ design with new color palette */
+.qualifying-exam-page {
+    --primary-color: #061148;     /* penn-blue - main brand color */
+    --secondary-color: #001464;   /* federal-blue - secondary elements */
+    --accent-color: #855CA6;      /* royal-purple - accents and highlights */
+    --text-on-primary: #FFFFFF;   /* white text on dark backgrounds */
+    --light-purple: rgba(133, 92, 166, 0.1); /* light purple for backgrounds */
+    --cta-color: #F19C96;         /* coral-pink - for call-to-action buttons */
+    --highlight-color: #F6C7C4;   /* tea-rose-red - for subtle highlights */
+    --purple-gradient: linear-gradient(135deg, #061148, #001464);
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --line-height-body: 1.6;
+}
+
+.qualifying-exam-page body,
+.qualifying-exam-page p,
+.qualifying-exam-page h1,
+.qualifying-exam-page h2,
+.qualifying-exam-page h3,
+.qualifying-exam-page h4,
+.qualifying-exam-page li {
+    font-family: var(--font-primary);
+    line-height: var(--line-height-body);
+}
+
+/* Update floating button to match site color palette */
+.floating-mcq-button {
+    background-color: var(--cta-color);
+    color: var(--dark-accent);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 2px solid transparent;
 }
 
 .floating-mcq-button i {
-    font-size: 1.2rem;
+    color: var(--dark-accent);
 }
 
-@media (max-width: 768px) {
-    .floating-mcq-button {
-        bottom: 20px;
-        left: 20px;
-        padding: 10px 16px;
-        font-size: 0.9rem;
-    }
+.floating-mcq-button:hover {
+    background-color: white;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 6px 16px rgba(133, 92, 166, 0.25);
 }
 
-/* Add these styles for the qualifying exam page */
-.qualifying-exam-page {
-    --primary-color: #6a3de8;
-    --secondary-color: #8a68ff;
-    --accent-color: #5e35b1;
-    --text-on-primary: #ffffff;
-    --light-purple: #f5f0ff;
-    --purple-gradient: linear-gradient(135deg, #6a3de8, #8a68ff);
-}
-
-.qualifying-exam-page .hero-section {
-    background: #4a2799; /* Dark purple background */
-    color: var(--text-on-primary);
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
-.qualifying-exam-page .hero-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-}
-
-.qualifying-exam-page .hero-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: white;
-    font-weight: 400;
-}
-
-.qualifying-exam-page .hero-section p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    line-height: 1.6;
+.floating-mcq-button:hover i {
+    color: var(--accent-color);
 }
 
 /* Animations for dramatic effect */
@@ -1919,4 +1941,11 @@ footer {
 .qualifying-exam-page .cta-button.large:hover {
     background-color: white;
     color: var(--primary-color);
+}
+
+.qualifying-exam-page .hero-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: var(--highlight-color); /* Using tea-rose-red for better contrast */
+    font-weight: 400;
 }
