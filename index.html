@@ -98,6 +98,7 @@
                 <a href="support.html">Support</a>
                 <a href="faq.html">FAQ</a>
                 <a href="blog-index.html">Blog</a>
+                <a href="discussions.html"><i class="fas fa-comments"></i> Community Forum</a>
                 <a href="about.html">About Us</a>
                 <div class="dropdown">
                     <a href="#">Policies</a>
@@ -142,6 +143,9 @@
                 </div>
                 <div class="mobile-nav-item">
                     <a href="blog-index.html">Blog</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="discussions.html"><i class="fas fa-comments"></i> Community Forum</a>
                 </div>
                 <div class="mobile-nav-item">
                     <a href="about.html">About Us</a>
@@ -414,6 +418,26 @@
             <p>Access thousands of practice questions specifically designed for the Canadian pharmacy licensing process. Our Canada pharmacy question bank covers all topics tested on the PEBC Evaluating Exam with detailed explanations and references.</p>
             <!-- Rest of your content -->
         </section>
+
+        <section class="community-section">
+            <div class="content-block">
+                <h2><i class="fas fa-users"></i> Join Our Community</h2>
+                <div class="community-content">
+                    <div class="community-info">
+                        <p>Connect with fellow PEBC candidates, share experiences, and get your questions answered in our community forum.</p>
+                        <ul class="community-features">
+                            <li><i class="fas fa-check-circle"></i> Get study tips from successful candidates</li>
+                            <li><i class="fas fa-check-circle"></i> Discuss exam preparation strategies</li>
+                            <li><i class="fas fa-check-circle"></i> Connect with other international pharmacists</li>
+                            <li><i class="fas fa-check-circle"></i> Stay updated with latest PEBC changes</li>
+                        </ul>
+                        <div class="cta-button-container">
+                            <a href="discussions.html" class="cta-button">Join the Discussion <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -428,6 +452,7 @@
                     <li><a href="blog-index.html">Blog</a></li>
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="discussions.html">Community Forum</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -454,5 +479,52 @@
     
     <!-- Add the analytics events script -->
     <script src="analytics-events.js"></script>
+
+    <style>
+        .community-section {
+            background: #f8f9fa;
+            padding: 40px 0;
+            margin: 40px 0;
+        }
+
+        .community-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .community-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .community-features li {
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .community-features i {
+            color: #28a745;
+            margin-right: 8px;
+        }
+
+        .community-info p {
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .community-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </body>
 </html>

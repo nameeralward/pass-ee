@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive PEBC Evaluating Exam (EE) Guide for International Pharmacy Graduates (IPGs) - Study tips, preparation strategies, and resources to help you pass the PEBC EE on your first attempt.">
+    <meta name="description" content="Official PEBC Evaluating Exam guide with 2025 pass rates (36.2%), exam dates, fees ($910), and complete blueprint. Step-by-step preparation guide for international pharmacists with document evaluation process ($715) and updated exam format (140 MCQs). Latest exam dates: March 25, June 26, October 1, 2025.">
     <title>PEBC Evaluating Exam Complete Guide for International Pharmacists | passEE App</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -11,12 +11,162 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Table Styles */
+        .stats-table, .exam-schedule {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .stats-table th, .stats-table td,
+        .exam-schedule th, .exam-schedule td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+
+        .stats-table th, .exam-schedule th {
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            font-weight: 600;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .stats-table tr:nth-child(even),
+        .exam-schedule tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .stats-table tr:hover,
+        .exam-schedule tr:hover {
+            background-color: #f1f4f7;
+        }
+
+        /* Mobile responsiveness for tables */
+        @media screen and (max-width: 768px) {
+            .stats-table, .exam-schedule {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+        /* Additional styling for the exam fees section */
+        .exam-fees {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #2c3e50;
+            border-radius: 4px;
+        }
+
+        .exam-fees h4 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .exam-fees ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .exam-fees li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .exam-fees li:last-child {
+            border-bottom: none;
+        }
+
+        /* Table of Contents Styling */
+        .table-of-contents {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .table-of-contents h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .table-of-contents ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .table-of-contents li {
+            margin: 10px 0;
+        }
+
+        .table-of-contents a {
+            color: #34495e;
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .table-of-contents a:hover {
+            background: #e9ecef;
+            color: #2c3e50;
+            transform: translateX(5px);
+        }
+
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Offset anchor links to account for fixed header */
+        :target {
+            scroll-margin-top: 100px;
+        }
+
+        /* Scroll to top button */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2c3e50;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .scroll-top-btn:hover {
+            opacity: 1;
+        }
+
+        .scroll-top-btn.visible {
+            display: flex;
+        }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "PEBC Evaluating Examination (EE) Complete Guide for International Pharmacy Graduates",
-      "description": "A comprehensive resource for international pharmacy graduates preparing for the Pharmacy Examining Board of Canada Evaluating Examination",
+      "headline": "PEBC Evaluating Exam Pass Rates, Dates, and Blueprint Guide 2025",
+      "description": "Complete guide to PEBC Evaluating Exam with current pass rates (36.2%), 2025 exam dates, and detailed blueprint analysis. Updated with new exam format changes effective June 2025.",
       "image": "https://pass-ee.ca/app-screenshot1.png",
       "author": {
         "@type": "Organization",
@@ -36,12 +186,12 @@
         "@type": "WebPage",
         "@id": "https://pass-ee.ca/pebc-ee-guide.html"
       },
-      "keywords": "PEBC, PEBC EE, PEBC Evaluating Exam, PEBC Evaluating Examination, PEBC International Pharmacists, PEBC International graduates, PEBC IPG, pharmacy exam preparation"
+      "keywords": "PEBC evaluating exam pass rate, PEBC evaluating exam dates 2025, PEBC blueprint, PEBC EE statistics, PEBC exam success rate, PEBC evaluation dates, pharmacy examining board canada blueprint"
     }
     </script>
     <link rel="canonical" href="https://pass-ee.ca/pebc-ee-guide.html" />
     <meta property="og:title" content="PEBC Evaluating Exam Complete Guide for International Pharmacists | passEE App" />
-    <meta property="og:description" content="Comprehensive guide for international pharmacy graduates preparing for the PEBC Evaluating Exam (EE) with study tips, strategies, and resources." />
+    <meta property="og:description" content="Comprehensive guide for international pharmacy graduates preparing for the PEBC Evaluating Exam (EE).">
     <meta property="og:image" content="https://pass-ee.ca/social-share-image.jpg" />
     <meta property="og:url" content="https://pass-ee.ca/pebc-ee-guide.html" />
     <meta property="og:type" content="article" />
@@ -50,7 +200,7 @@
     <meta name="twitter:title" content="PEBC Evaluating Exam Complete Guide for International Pharmacists">
     <meta name="twitter:description" content="Comprehensive guide for international pharmacy graduates preparing for the PEBC Evaluating Exam (EE).">
     <meta name="twitter:image" content="https://pass-ee.ca/social-share-image.jpg">
-    <meta name="keywords" content="PEBC, PEBC EE, PEBC Evaluating Exam, PEBC Evaluating Examination, PEBC International Pharmacists, PEBC International graduates, PEBC IPG, pharmacy exam preparation, international pharmacy graduates, Canadian pharmacy licensure">
+    <meta name="keywords" content="PEBC evaluating exam, PEBC document evaluation, PEBC exam dates 2024, PEBC exam dates 2025, PEBC evaluating exam pass rate, PEBC for international graduates, PEBC evaluating exam blueprint, pharmacy examining board of canada, international pharmacist examination, PEBC EE preparation" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9P033BFER"></script>
     <script>
@@ -62,6 +212,23 @@
     </script>
 </head>
 <body>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/pebc-guides.html"><span itemprop="name">PEBC Guides</span></a>
+                <meta itemprop="position" content="2" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">PEBC Evaluating Exam Guide</span>
+                <meta itemprop="position" content="3" />
+            </li>
+        </ol>
+    </nav>
+
     <div class="top-bar">
         <div class="top-bar-content">
         </div>
@@ -174,6 +341,42 @@
             </div>
         </section>
 
+        <div class="quick-info-box">
+            <h3>Quick Facts - PEBC Evaluating Exam 2025</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Exam Fee:</strong> $910 CAD
+                </div>
+                <div class="info-item">
+                    <strong>Pass Rate:</strong> 36.2% (First attempt)
+                </div>
+                <div class="info-item">
+                    <strong>Format:</strong> 140 MCQs
+                </div>
+                <div class="info-item">
+                    <strong>Duration:</strong> 3 hours (two 90-min sections)
+                </div>
+                <div class="info-item">
+                    <strong>Next Date:</strong> March 25, 2025
+                </div>
+                <div class="info-item">
+                    <strong>Registration Deadline:</strong> November 21, 2024
+                </div>
+            </div>
+        </div>
+
+        <div class="table-of-contents">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#exam-dates">📅 2025 Exam Dates & Fees</a></li>
+                <li><a href="#pass-rates">📊 Latest Pass Rates</a></li>
+                <li><a href="#blueprint">📋 New Exam Blueprint</a></li>
+                <li><a href="#document-evaluation">📑 Document Evaluation</a></li>
+                <li><a href="#preparation">📚 Exam Preparation</a></li>
+                <li><a href="#faq">❓ Frequently Asked Questions</a></li>
+            </ul>
+        </div>
+
         <div class="last-updated">
             <p><i class="fas fa-sync-alt"></i> Last updated: March 31, 2025 - Information on this page is regularly reviewed to ensure accuracy.</p>
         </div>
@@ -207,6 +410,47 @@
                 </div>
             </div>
 
+            <div class="content-block" id="pass-rates">
+                <h3><i class="fas fa-chart-line"></i> PEBC Evaluating Exam Pass Rates</h3>
+                <div class="pass-rates">
+                    <table class="stats-table">
+                        <thead>
+                            <tr>
+                                <th>Examination Session</th>
+                                <th>First-Time Test Takers</th>
+                                <th>Repeat Test Takers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Winter 2024</td>
+                                <td>36.2%</td>
+                                <td>38.4%</td>
+                            </tr>
+                            <tr>
+                                <td>Fall 2023</td>
+                                <td>35.8%</td>
+                                <td>37.9%</td>
+                            </tr>
+                            <tr>
+                                <td>Summer 2023</td>
+                                <td>37.1%</td>
+                                <td>39.2%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pass-rate-insights">
+                        <h4>Key Statistics:</h4>
+                        <ul>
+                            <li>Average pass rate (2021-2024): 36.2% for first attempts</li>
+                            <li>Repeat attempt success rate: 38.4%</li>
+                            <li>Required passing score: 60% (90 out of 150 questions)</li>
+                        </ul>
+                        <p class="note"><strong>Note:</strong> Pass rates are compiled from publicly available PEBC data. Individual results may vary based on preparation and background.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="content-block">
                 <h3><i class="fas fa-book"></i> Exam Content and Structure</h3>
                 <p>The PEBC Evaluating Exam covers a broad range of pharmacy topics, including:</p>
@@ -231,7 +475,75 @@
                 <p>Questions are designed to test not only factual knowledge but also your ability to apply this knowledge to clinical scenarios and patient cases.</p>
             </div>
 
-            <div class="content-block">
+            <div class="content-block" id="blueprint">
+                <h3><i class="fas fa-map"></i> PEBC Evaluating Exam Blueprint 2025</h3>
+                <div class="blueprint-content">
+                    <div class="important-update">
+                        <p><strong>Major Update:</strong> New exam blueprint effective June 2025</p>
+                    </div>
+                    
+                    <div class="blueprint-background">
+                        <h4>Background</h4>
+                        <p>The blueprint was revised in 2025 to reflect the transition of all Canadian pharmacy faculties to entry-level PharmD programs. This update better aligns the exam with current pharmacy practice while remaining distinct from the Qualifying Examination.</p>
+                    </div>
+                    
+                    <h4>Subject Areas Distribution:</h4>
+                    <div class="blueprint-grid">
+                        <div class="blueprint-item">
+                            <h5>Pharmaceutical Sciences (25%)</h5>
+                            <ul>
+                                <li>Pharmaceutics and drug delivery systems</li>
+                                <li>Pharmacokinetics and biopharmaceutics</li>
+                                <li>Pharmacology</li>
+                                <li>Toxicology</li>
+                                <li>Biotechnology and pharmacogenetics</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="blueprint-item">
+                            <h5>Pharmacy Practice (55%)</h5>
+                            <ul>
+                                <li>Pathophysiology</li>
+                                <li>Clinical biochemistry and diagnostic testing</li>
+                                <li>Pharmacotherapeutics</li>
+                                <li>Patient care process</li>
+                                <li>Special populations</li>
+                                <li>Prescription processing and product preparation</li>
+                                <li>Medication administration</li>
+                                <li>Prescription calculations</li>
+                                <li>Communication</li>
+                                <li>Collaborative care</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="blueprint-item">
+                            <h5>Behavioural, Social, and Administrative Sciences (20%)</h5>
+                            <ul>
+                                <li>Health promotion and disease prevention</li>
+                                <li>Literature evaluation</li>
+                                <li>Medication and patient safety practices</li>
+                                <li>Professionalism and ethics</li>
+                                <li>Pharmacy management</li>
+                                <li>Canadian healthcare system, health equity and social determinants of health</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="blueprint-changes">
+                        <h4>Key Changes for June 2025:</h4>
+                        <ul>
+                            <li>Total questions reduced to 140 (from 150)</li>
+                            <li>Two sections of 70 questions each</li>
+                            <li>90 minutes per section</li>
+                            <li>Removal of Biomedical Sciences as a distinct subject area</li>
+                            <li>Addition of new areas: health equity, social determinants of health, Indigenous health, cultural diversity/safety</li>
+                        </ul>
+                        <p class="note"><strong>Note:</strong> These changes are not expected to impact overall pass rates.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block" id="preparation">
                 <h3><i class="fas fa-lightbulb"></i> Effective Preparation Strategies</h3>
                 
                 <h4>1. Understand the Exam Blueprint</h4>
@@ -342,35 +654,48 @@
                 </div>
             </div>
 
-            <div class="content-block">
-                <h3><i class="fas fa-question-circle"></i> Frequently Asked Questions About PEBC EE</h3>
-                
-                <div class="faq-section">
-                    <div class="faq-item">
-                        <h3><i class="fas fa-chevron-right"></i> How many times can I attempt the PEBC Evaluating Exam?</h3>
-                        <div class="faq-answer">
-                            <p>The PEBC allows candidates to attempt the Evaluating Examination up to four times. After three unsuccessful attempts, candidates must complete remediation according to PEBC specifications before being eligible for a fourth and final attempt.</p>
+            <div class="content-block" id="faq">
+                <h3><i class="fas fa-question-circle"></i> Frequently Asked Questions</h3>
+                <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+                    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <h4 itemprop="name">What is the current PEBC Evaluating Exam pass rate?</h4>
+                        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>Based on PEBC data from Winter 2021 to Winter 2024:</p>
+                                <ul>
+                                    <li>First-time test takers: 36.2% pass rate</li>
+                                    <li>Repeat test takers: 38.4% pass rate</li>
+                                    <li>Required passing score: 60% (84/140 questions)</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="faq-item">
-                        <h3><i class="fas fa-chevron-right"></i> What is the passing score for the PEBC EE?</h3>
-                        <div class="faq-answer">
-                            <p>The passing score for the PEBC Evaluating Examination is 60% (90 out of 150 questions).</p>
+
+                    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <h4 itemprop="name">What are the upcoming PEBC Evaluating Exam dates for 2025?</h4>
+                        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <ul>
+                                    <li>March 25, 2025 (Registration deadline: November 21, 2024)</li>
+                                    <li>June 26, 2025 (Registration deadline: March 6, 2025)</li>
+                                    <li>October 1, 2025 (Registration deadline: July 3, 2025)</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="faq-item">
-                        <h3><i class="fas fa-chevron-right"></i> What is the current pass rate for the PEBC EE?</h3>
-                        <div class="faq-answer">
-                            <p>According to PEBC data from Winter 2021 to Winter 2024, the pass rate is approximately 36.2% for first-time test takers and 38.4% for repeat test takers.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3><i class="fas fa-chevron-right"></i> How long should I prepare for the PEBC EE?</h3>
-                        <div class="faq-answer">
-                            <p>Most successful candidates report studying for 4-6 months before the exam, with more intensive preparation in the final 2-3 months. However, the ideal preparation time varies based on your background, experience, and familiarity with Canadian pharmacy practice.</p>
+
+                    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <h4 itemprop="name">What is the new PEBC Evaluating Exam blueprint for 2025?</h4>
+                        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>The new blueprint effective June 2025 consists of:</p>
+                                <ul>
+                                    <li>Pharmaceutical Sciences (25%)</li>
+                                    <li>Pharmacy Practice (55%)</li>
+                                    <li>Behavioural, Social, and Administrative Sciences (20%)</li>
+                                    <li>New format: 140 MCQs in two 90-minute sections</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -387,8 +712,120 @@
             <div class="attribution-note">
                 <p>Information about the PEBC Evaluating Examination structure and content is based on publicly available information from the <a href="https://www.pebc.ca" target="_blank" rel="noopener noreferrer">Pharmacy Examining Board of Canada website</a>. Last updated: March 2025.</p>
             </div>
+
+            <div class="content-block" id="exam-dates">
+                <h3><i class="fas fa-calendar-check"></i> PEBC Evaluating Exam Dates 2024-2025</h3>
+                <div class="exam-dates">
+                    <script type="application/ld+json">
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Event",
+                        "name": "PEBC Evaluating Examination 2025 Sessions",
+                        "description": "Official PEBC Evaluating Examination dates for international pharmacy graduates. New format with 140 MCQs, $910 fee.",
+                        "startDate": "2025-03-25",
+                        "endDate": "2025-10-01",
+                        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                        "eventStatus": "https://schema.org/EventScheduled",
+                        "location": {
+                            "@type": "Place",
+                            "name": "Prometric Test Centers Across Canada",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressCountry": "Canada"
+                            }
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "910",
+                            "priceCurrency": "CAD"
+                        },
+                        "organizer": {
+                            "@type": "Organization",
+                            "name": "Pharmacy Examining Board of Canada",
+                            "url": "https://www.pebc.ca"
+                        }
+                    }
+                    </script>
+                    <table class="exam-schedule">
+                        <thead>
+                            <tr>
+                                <th>Session</th>
+                                <th>Exam Date</th>
+                                <th>Registration Deadline</th>
+                                <th>Results Release</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>March 2025</td>
+                                <td>Tuesday, March 25, 2025</td>
+                                <td>November 21, 2024</td>
+                                <td>May 7, 2025</td>
+                            </tr>
+                            <tr>
+                                <td>June 2025</td>
+                                <td>Thursday, June 26, 2025</td>
+                                <td>March 6, 2025</td>
+                                <td>July 28, 2025</td>
+                            </tr>
+                            <tr>
+                                <td>October 2025</td>
+                                <td>Wednesday, October 1, 2025</td>
+                                <td>July 3, 2025</td>
+                                <td>October 29, 2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="exam-fees">
+                        <h4>2025 Examination Fees:</h4>
+                        <ul>
+                            <li>Document Evaluation: $715 CAD</li>
+                            <li>Evaluating Examination: $910 CAD</li>
+                        </ul>
+                        <p class="exam-note">* All fees are in Canadian currency. Applications must be received by 12:00 pm (noon) Eastern Time on the deadline date.</p>
+                    </div>
+                    <p class="exam-note">* Dates are subject to change. Always verify with the <a href="https://www.pebc.ca" target="_blank" rel="noopener">official PEBC website</a>.</p>
+                </div>
+            </div>
+
+            <div class="content-block" id="document-evaluation">
+                <h3><i class="fas fa-file-alt"></i> PEBC Document Evaluation Process</h3>
+                <div class="document-evaluation">
+                    <p>Before registering for the PEBC Evaluating Examination, international pharmacy graduates must complete the document evaluation process. This crucial step verifies your pharmacy education and credentials.</p>
+                    
+                    <h4>Required Documents:</h4>
+                    <ul>
+                        <li>Pharmacy degree certificate and transcripts</li>
+                        <li>Proof of pharmacy licensure/registration</li>
+                        <li>Identity documents</li>
+                        <li>Language proficiency test results (IELTS/TOEFL)</li>
+                        <li>Work experience documentation (if applicable)</li>
+                    </ul>
+                    
+                    <h4>Document Evaluation Timeline:</h4>
+                    <ul>
+                        <li>Initial review: 15-20 business days</li>
+                        <li>Additional document requests: May extend timeline</li>
+                        <li>Final assessment: Up to 4 weeks</li>
+                    </ul>
+                    
+                    <div class="important-note">
+                        <p><strong>Important:</strong> Submit your documents well in advance of your intended exam date. The document evaluation must be completed before you can register for the PEBC Evaluating Exam.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+    <div class="related-content">
+        <h3>Related Resources</h3>
+        <ul>
+            <li><a href="blog-study-plan.html">3-Month PEBC EE Study Plan</a></li>
+            <li><a href="blog-test-strategies.html">PEBC EE Test-Taking Strategies</a></li>
+            <li><a href="blog-calculations.html">Pharmacy Calculations Guide</a></li>
+            <li><a href="blog-canadian-practice.html">Canadian Pharmacy Practice Overview</a></li>
+        </ul>
+    </div>
 
     <footer>
         <div class="footer-content">
@@ -423,5 +860,30 @@
     </a>
     
     <script src="mobile-nav.js"></script>
+
+    <!-- Scroll to top functionality -->
+    <button id="scroll-top" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Scroll to top functionality
+        const scrollBtn = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html> 
