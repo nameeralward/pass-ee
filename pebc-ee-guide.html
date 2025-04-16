@@ -160,6 +160,79 @@
         .scroll-top-btn.visible {
             display: flex;
         }
+
+        /* Related resources styling */
+        .related-content {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .related-content h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+        
+        .related-content h3 i {
+            margin-right: 8px;
+            color: #2c3e50;
+        }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .resource-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .resource-card i {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .resource-card h4 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        
+        .resource-card p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        
+        /* Mobile responsiveness for resource grid */
+        @media screen and (max-width: 768px) {
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -212,23 +285,6 @@
     </script>
 </head>
 <body>
-    <nav class="breadcrumb" aria-label="breadcrumb">
-        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="/pebc-guides.html"><span itemprop="name">PEBC Guides</span></a>
-                <meta itemprop="position" content="2" />
-            </li>
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span itemprop="name">PEBC Evaluating Exam Guide</span>
-                <meta itemprop="position" content="3" />
-            </li>
-        </ol>
-    </nav>
-
     <div class="top-bar">
         <div class="top-bar-content">
         </div>
@@ -818,13 +874,29 @@
     </main>
 
     <div class="related-content">
-        <h3>Related Resources</h3>
-        <ul>
-            <li><a href="blog-study-plan.html">3-Month PEBC EE Study Plan</a></li>
-            <li><a href="blog-test-strategies.html">PEBC EE Test-Taking Strategies</a></li>
-            <li><a href="blog-calculations.html">Pharmacy Calculations Guide</a></li>
-            <li><a href="blog-canadian-practice.html">Canadian Pharmacy Practice Overview</a></li>
-        </ul>
+        <h3><i class="fas fa-book-reader"></i> Related Resources</h3>
+        <div class="resource-grid">
+            <a href="blog-study-plan.html" class="resource-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h4>3-Month PEBC EE Study Plan</h4>
+                <p>Comprehensive study schedule with weekly goals</p>
+            </a>
+            <a href="blog-test-strategies.html" class="resource-card">
+                <i class="fas fa-lightbulb"></i>
+                <h4>PEBC EE Test-Taking Strategies</h4>
+                <p>Expert tips for exam success</p>
+            </a>
+            <a href="blog-calculations.html" class="resource-card">
+                <i class="fas fa-calculator"></i>
+                <h4>Pharmacy Calculations Guide</h4>
+                <p>Practice problems and solutions</p>
+            </a>
+            <a href="blog-canadian-practice.html" class="resource-card">
+                <i class="fas fa-clinic-medical"></i>
+                <h4>Canadian Pharmacy Practice Overview</h4>
+                <p>Essential concepts for international pharmacists</p>
+            </a>
+        </div>
     </div>
 
     <footer>
