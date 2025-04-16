@@ -15,36 +15,41 @@
             padding: 20px;
         }
 
-        .github-discussions {
-            width: 100%;
-            height: 800px;
-            border: none;
+        .forum-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .category-card {
+            background: white;
             border-radius: 8px;
+            padding: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
 
-        .discussions-intro {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
+        .category-card:hover {
+            transform: translateY(-5px);
         }
 
-        .guidelines {
-            background: #fff;
-            padding: 20px;
-            border-left: 4px solid #2c3e50;
-            margin: 20px 0;
+        .category-card h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .join-discussion {
-            text-align: center;
-            margin: 20px 0;
+        .category-card p {
+            color: #666;
+            margin-bottom: 15px;
         }
 
-        .discussion-btn {
+        .category-link {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 8px 16px;
             background: #2c3e50;
             color: white;
             text-decoration: none;
@@ -52,54 +57,157 @@
             transition: background 0.3s;
         }
 
-        .discussion-btn:hover {
+        .category-link:hover {
             background: #34495e;
         }
 
-        @media (max-width: 768px) {
-            .github-discussions {
-                height: 600px;
-            }
+        .discord-widget {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .telegram-group {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .discussion-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .discussion-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .discussion-category {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .discussion-category:hover {
+            background: #e9ecef;
+        }
+
+        .discussion-category.active {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .giscus {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .giscus-frame {
+            border: none;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <!-- Include your existing header -->
+    <header>
+        <!-- Your existing header content -->
+    </header>
 
     <main>
         <div class="discussions-container">
-            <h1><i class="fas fa-comments"></i> PEBC EE Community Discussions</h1>
+            <h1><i class="fas fa-comments"></i> PEBC EE Community Forum</h1>
             
             <div class="discussions-intro">
-                <p>Welcome to the passEE community! This is a space for international pharmacy graduates to connect, share experiences, and support each other in preparing for the PEBC Evaluating Examination.</p>
+                <p>Join our community discussions about PEBC Evaluating Exam preparation. Share experiences, ask questions, and connect with fellow candidates.</p>
             </div>
 
-            <div class="guidelines">
-                <h3>Community Guidelines</h3>
-                <ul>
-                    <li>Be respectful and supportive of fellow candidates</li>
-                    <li>Do not share specific exam questions or content</li>
-                    <li>Avoid sharing personal or confidential information</li>
-                    <li>Stay on topic - focus on PEBC EE preparation</li>
-                </ul>
+            <div class="discussion-section">
+                <h2>Discussion Categories</h2>
+                <div class="discussion-categories">
+                    <div class="discussion-category" data-category="study-tips">
+                        <h3><i class="fas fa-book"></i> Study Tips</h3>
+                        <p>Share and discuss study strategies</p>
+                    </div>
+                    <div class="discussion-category" data-category="exam-prep">
+                        <h3><i class="fas fa-pencil-alt"></i> Exam Preparation</h3>
+                        <p>Discuss exam format and preparation</p>
+                    </div>
+                    <div class="discussion-category" data-category="success-stories">
+                        <h3><i class="fas fa-trophy"></i> Success Stories</h3>
+                        <p>Share your success journey</p>
+                    </div>
+                </div>
+
+                <!-- Giscus Comments Section -->
+                <div class="giscus-comments">
+                    <script src="https://giscus.app/client.js"
+                        data-repo="nameeralward/pass-ee"
+                        data-repo-id="R_kgDON-dkkQ"
+                        data-category="General"
+                        data-category-id="DIC_kwDON-dkkc4CpKGV"
+                        data-mapping="pathname"
+                        data-strict="0"
+                        data-reactions-enabled="1"
+                        data-emit-metadata="0"
+                        data-input-position="bottom"
+                        data-theme="light"
+                        data-lang="en"
+                        crossorigin="anonymous"
+                        async>
+                    </script>
+                </div>
             </div>
 
-            <div class="join-discussion">
-                <a href="https://github.com/your-repo/discussions" target="_blank" class="discussion-btn">
-                    <i class="fab fa-github"></i> Join the Discussion
-                </a>
+            <div class="community-guidelines">
+                <h2>Community Guidelines</h2>
+                <div class="guidelines">
+                    <ul>
+                        <li>Be respectful and supportive of fellow candidates</li>
+                        <li>Do not share specific exam questions or content</li>
+                        <li>Avoid sharing personal or confidential information</li>
+                        <li>Stay on topic - focus on PEBC EE preparation</li>
+                    </ul>
+                </div>
             </div>
-
-            <!-- GitHub Discussions iframe -->
-            <iframe 
-                src="https://github.com/your-repo/discussions/embed" 
-                class="github-discussions"
-                title="PEBC EE Community Discussions"
-                loading="lazy">
-            </iframe>
         </div>
     </main>
 
     <!-- Include your existing footer -->
+    <footer>
+        <!-- Your existing footer content -->
+    </footer>
+
+    <script>
+        // Handle category switching
+        document.querySelectorAll('.discussion-category').forEach(category => {
+            category.addEventListener('click', () => {
+                // Remove active class from all categories
+                document.querySelectorAll('.discussion-category').forEach(c => {
+                    c.classList.remove('active');
+                });
+                // Add active class to clicked category
+                category.classList.add('active');
+                
+                // Update giscus discussion based on category
+                const giscusFrame = document.querySelector('iframe.giscus-frame');
+                if (giscusFrame) {
+                    giscusFrame.src = giscusFrame.src.replace(
+                        /\?discussion_term=[^&]*/, 
+                        `?discussion_term=${category.dataset.category}`
+                    );
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
