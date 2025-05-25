@@ -2346,3 +2346,16 @@ footer {
 .subscription-intro {
     text-align: center;
 }
+
+@media (max-width: 500px) {
+    .announcement-title {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        word-break: break-word;
+        white-space: normal;
+        padding: 0 0.5rem;
+    }
+    .announcement-section {
+        padding: 1rem 0.2rem;
+    }
+}
