@@ -2369,4 +2369,9 @@ footer {
     .announcement-section {
         padding: 1.5rem 1rem;
     }
+    .app-store-buttons .cta-button {
+        min-width: 120px;   /* Reduce from 200px */
+        font-size: 0.95rem; /* Slightly smaller text */
+        padding: 10px 12px; /* Less padding */
+    }
 }
