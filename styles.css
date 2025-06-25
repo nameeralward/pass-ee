@@ -141,15 +141,20 @@ nav a:hover, .dropdown > a:hover {
 }
 
 .mobile-nav-portal-link {
-    background: var(--cta-color);
-    color: white;
+    background: var(--accent-color);
+    color: white !important;
     padding: 0.8rem 1rem;
     border-radius: 6px;
     font-weight: 600;
-    margin: 0.5rem 0;
+    margin: 0.5rem 1rem;
     display: block;
     text-align: center;
     transition: all 0.3s ease;
+    width: calc(100% - 2rem);
+}
+
+.mobile-nav-portal-link i {
+    color: white !important;
 }
 
 .mobile-nav-portal-link:hover {
@@ -479,6 +484,43 @@ main {
     border-radius: var(--border-radius);
     box-shadow: 0 4px 12px rgba(14, 16, 50, 0.2);
     border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.students-guide-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 8px rgba(52, 184, 195, 0.3);
+}
+
+.students-guide-btn:hover {
+    background: #2da4ae;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 184, 195, 0.4);
+}
+
+.students-guide-btn i {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .students-guide-btn {
+        position: static;
+        margin: 0 0 1rem 0;
+        width: fit-content;
+    }
 }
 
 h2 {
@@ -1841,8 +1883,8 @@ footer {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 85%;
-    max-width: 400px;
+    width: 70%;
+    max-width: 320px;
     height: 100vh;
     background-color: #fff;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
