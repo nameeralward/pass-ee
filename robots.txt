@@ -4,37 +4,12 @@
 User-agent: *
 Allow: /
 
-# Explicitly allow all important pages
-Allow: /index.html
-Allow: /pebc-ee-guide.html
-Allow: /subscription.html
-Allow: /blog-index.html
-Allow: /blog-study-plan.html
-Allow: /blog-calculations.html
-Allow: /blog-canadian-practice.html
-Allow: /blog-blueprint-guide.html
-Allow: /blog-time-management.html
-Allow: /blog-pass-rates.html
-Allow: /blog-test-strategies.html
-Allow: /faq.html
-Allow: /support.html
-Allow: /about.html
-Allow: /promotions.html
-Allow: /qualifying-exam.html
-Allow: /privacy-policy.html
-Allow: /terms-of-service.html
-Allow: /device-switching.html
-Allow: /policies.html
-
-# Block access to admin and private areas only
+# Block admin areas only
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
-Disallow: /*.pdf$
-Disallow: /404.html
-Disallow: /old-pages/
 
-# Sitemap locations
+# Sitemaps
 Sitemap: https://pass-ee.ca/sitemap.xml
 Sitemap: https://pass-ee.ca/blog-sitemap.xml
 
