@@ -1,4 +1,4 @@
-// Enhanced Analytics Events for PassEE - Comprehensive User Behavior Tracking
+// Enhanced Analytics Events for passEE - Comprehensive User Behavior Tracking
 document.addEventListener('DOMContentLoaded', function() {
   
   // ===========================================
@@ -360,5 +360,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  console.log('Enhanced PassEE Analytics initialized - Tracking comprehensive user behavior');
+  console.log('Enhanced passEE Analytics initialized - Tracking comprehensive user behavior');
 }); 
