@@ -59,7 +59,4 @@ User-agent: MJ12bot
 Disallow: /
 
 User-agent: SemrushBot
-Disallow: /
-
-# Host directive (preferred domain)
-Host: pass-ee.ca 
+Disallow: / 
