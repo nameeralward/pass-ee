@@ -1,6 +1,3 @@
-# Robots.txt for PassEE - PEBC Evaluating Exam Preparation Platform
-# Allow all web crawlers full access to public content
-
 User-agent: *
 Allow: /
 
@@ -11,27 +8,4 @@ Disallow: /temp/
 
 # Sitemaps
 Sitemap: https://pass-ee.ca/sitemap.xml
-Sitemap: https://pass-ee.ca/blog-sitemap.xml
-
-# Crawl-delay for different bots (in seconds)
-User-agent: Googlebot
-Crawl-delay: 1
-
-User-agent: Bingbot
-Crawl-delay: 2
-
-User-agent: Slurp
-Crawl-delay: 3
-
-User-agent: DuckDuckBot
-Crawl-delay: 2
-
-# Block specific bots that might be harmful
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: / 
+Sitemap: https://pass-ee.ca/blog-sitemap.xml 
