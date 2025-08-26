@@ -164,73 +164,15 @@
             </div>
             
             <div class="promotion-grid">
-                <!-- Dynamic Friend Referral Offer - 50% Off Summer 2025 -->
-                <div class="promotion-card" id="summer-referral-promotion">
+                <!-- Expired Summer Sale -->
+                <div class="promotion-card expired">
                     <div class="promotion-badge">
-                        <span id="promotion-status">LOADING...</span>
+                        <span>EXPIRED</span>
                     </div>
                     <h3><i class="fas fa-percentage"></i> Summer Sale - 50% OFF</h3>
                     <div class="promotion-details">
-                        <p class="limited-time-tag">Limited Time Offer <i class="fas fa-hourglass-half"></i></p>
-                        <p>Get <strong>50% OFF all passEE subscriptions</strong> during our summer sale! Perfect for intensive exam preparation.</p>
-                        
-                        <div class="discount-highlight">
-                            <div class="discount-badge">
-                                <span class="discount-percent">50%</span>
-                                <span class="discount-text">OFF</span>
-                            </div>
-                            <div class="discount-details">
-                                                        <p><strong>3 Months:</strong> <span class="original-price">$129 CAD</span> → <span class="sale-price">$64.99 CAD</span></p>
-                        <p><strong>6 Months:</strong> <span class="original-price">$199 CAD</span> → <span class="sale-price">$99.99 CAD</span></p>
-                            </div>
-                        </div>
-                        
-                        <h4>How to Get Your Discount:</h4>
-                        <div class="discount-methods">
-                            <div class="discount-method">
-                                <h5><i class="fas fa-mobile-alt"></i> Mobile Apps (Automatic)</h5>
-                                <ul>
-                                    <li><strong>App Store (iOS):</strong> Discount applied automatically at checkout</li>
-                                    <li><strong>Google Play (Android):</strong> Discount applied automatically at checkout</li>
-                                    <li>No promo code needed - savings are instant!</li>
-                                </ul>
-                            </div>
-                            <div class="discount-method">
-                                <h5><i class="fas fa-globe"></i> Web App</h5>
-                                <ul>
-                                    <li>Visit <a href="https://app.pass-ee.ca" target="_blank">app.pass-ee.ca</a></li>
-                                    <li>Use promo code: <strong class="promo-code">WELCOME3</strong> (3 months) or <strong class="promo-code">WELCOME6</strong> (6 months)</li>
-                                    <li>Enter code at checkout for 50% discount</li>
-                        </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="promotion-timer" id="countdown-container">
-                            <p class="timer-title">Offer ends in:</p>
-                            <div class="countdown-timer">
-                                <div class="countdown-item">
-                                    <span class="countdown-number days">00</span>
-                                    <span class="countdown-label">Days</span>
-                                </div>
-                                <div class="countdown-item">
-                                    <span class="countdown-number hours">00</span>
-                                    <span class="countdown-label">Hours</span>
-                                </div>
-                                <div class="countdown-item">
-                                    <span class="countdown-number minutes">00</span>
-                                    <span class="countdown-label">Minutes</span>
-                                </div>
-                                <div class="countdown-item">
-                                    <span class="countdown-number seconds">00</span>
-                                    <span class="countdown-label">Seconds</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="promotion-dates">
-                            <p><strong>Valid from:</strong> June 26, 2025</p>
-                            <p><strong>Valid until:</strong> August 26, 2025</p>
-                        </div>
+                        <p>Our Summer Sale offered 50% OFF all passEE subscriptions with significant savings for intensive exam preparation.</p>
+                        <p class="promotion-date">Ended August 26, 2025</p>
                     </div>
                 </div>
                 
@@ -355,101 +297,6 @@
     
     <script src="mobile-nav.js"></script>
     
-    <!-- Summer Referral Promotion Management Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Promotion dates: June 26, 2025 to August 26, 2025
-            const promotionStartDate = new Date("June 26, 2025 00:00:00").getTime();
-            const promotionEndDate = new Date("August 26, 2025 23:59:59").getTime();
-            
-            const promotionCard = document.getElementById('summer-referral-promotion');
-            const promotionStatus = document.getElementById('promotion-status');
-            const countdownContainer = document.getElementById('countdown-container');
-            
-            // Function to update promotion status and countdown
-            function updatePromotionStatus() {
-                const now = new Date().getTime();
-                
-                if (now < promotionStartDate) {
-                    // Promotion hasn't started yet
-                    promotionCard.classList.remove('active', 'expired');
-                    promotionCard.classList.add('upcoming');
-                    promotionStatus.textContent = 'COMING SOON';
-                    
-                    // Show countdown to start date
-                    const timeUntilStart = promotionStartDate - now;
-                    updateCountdownDisplay(timeUntilStart, 'Promotion starts in:');
-                    
-                } else if (now >= promotionStartDate && now <= promotionEndDate) {
-                    // Promotion is active
-                    promotionCard.classList.remove('upcoming', 'expired');
-                    promotionCard.classList.add('active');
-                    promotionStatus.textContent = 'ACTIVE';
-                    
-                    // Show countdown to end date
-                    const timeUntilEnd = promotionEndDate - now;
-                    updateCountdownDisplay(timeUntilEnd, 'Offer ends in:');
-                    
-                } else {
-                    // Promotion has ended
-                    promotionCard.classList.remove('active', 'upcoming');
-                    promotionCard.classList.add('expired');
-                    promotionStatus.textContent = 'EXPIRED';
-                    
-                    // Show expired message
-                    countdownContainer.innerHTML = '<p class="expired-message">This promotion has ended</p>';
-                }
-            }
-            
-            // Function to update countdown display
-            function updateCountdownDisplay(timeRemaining, titleText) {
-                if (timeRemaining <= 0) {
-                    updatePromotionStatus();
-                    return;
-                }
-                
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-                
-                // Update the countdown display
-                const timerTitle = document.querySelector('.timer-title');
-                if (timerTitle) {
-                    timerTitle.textContent = titleText;
-                }
-                
-                const daysElement = document.querySelector('.countdown-timer .days');
-                const hoursElement = document.querySelector('.countdown-timer .hours');
-                const minutesElement = document.querySelector('.countdown-timer .minutes');
-                const secondsElement = document.querySelector('.countdown-timer .seconds');
-                
-                if (daysElement) daysElement.textContent = days.toString().padStart(2, '0');
-                if (hoursElement) hoursElement.textContent = hours.toString().padStart(2, '0');
-                if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
-                if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0');
-            }
-            
-            // Update immediately when page loads
-            updatePromotionStatus();
-            
-            // Then update every second
-            const promotionTimer = setInterval(updatePromotionStatus, 1000);
-            
-            // Optional: Add event tracking for Google Analytics
-            if (typeof gtag !== 'undefined') {
-                const now = new Date().getTime();
-                if (now >= promotionStartDate && now <= promotionEndDate) {
-                    gtag('event', 'promotion_view', {
-                        'promotion_id': 'summer_referral_2025',
-                        'promotion_name': 'Summer Friend Referral 50% Off',
-                        'creative_name': 'Summer 2025 Referral Banner',
-                        'creative_slot': 'promotions_page'
-                    });
-                }
-            }
-        });
-    </script>
+
 </body>
 </html> 

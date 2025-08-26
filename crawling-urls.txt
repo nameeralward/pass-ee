@@ -1,0 +1,47 @@
+PASSEE WEBSITE - ALL URLS FOR GOOGLE SEARCH CONSOLE CRAWLING
+================================================================
+
+MAIN PAGES:
+https://pass-ee.ca/
+https://pass-ee.ca/pebc-ee-guide.html
+https://pass-ee.ca/subscription.html
+https://pass-ee.ca/blog-index.html
+https://pass-ee.ca/faq.html
+https://pass-ee.ca/about.html
+https://pass-ee.ca/support.html
+
+BLOG POSTS:
+https://pass-ee.ca/blog-study-plan.html
+https://pass-ee.ca/blog-calculations.html
+https://pass-ee.ca/blog-canadian-practice.html
+https://pass-ee.ca/blog-blueprint-guide.html
+https://pass-ee.ca/blog-time-management.html
+https://pass-ee.ca/blog-pass-rates.html FAILED
+https://pass-ee.ca/blog-test-strategies.html
+
+POLICY & INFO PAGES:
+https://pass-ee.ca/privacy-policy.html
+https://pass-ee.ca/terms-of-service.html
+https://pass-ee.ca/device-switching.html
+https://pass-ee.ca/policies.html
+https://pass-ee.ca/qualifying-exam.html
+https://pass-ee.ca/promotions.html
+
+SITEMAPS:
+https://pass-ee.ca/sitemap.xml
+https://pass-ee.ca/blog-sitemap.xml
+
+TOTAL: 20 HTML pages + 2 sitemaps = 22 URLs
+
+PRIORITY ORDER FOR CRAWLING REQUESTS:
+1. Homepage (/)
+2. PEBC EE Guide
+3. Subscription
+4. Blog Index
+5. Blog Blueprint Guide
+6. Blog Pass Rates
+7. Blog Time Management
+8. Blog Study Plan
+9. FAQ
+10. About
+(Then remaining pages) 
