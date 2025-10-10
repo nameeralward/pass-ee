@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://pass-ee.ca/blog-index.html</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -111,6 +111,24 @@
   <url>
     <loc>https://pass-ee.ca/blog-time-management.html</loc>
     <lastmod>2025-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pass-ee.ca/blog-licensure-pathway.html</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pass-ee.ca/blog-exam-grading.html</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pass-ee.ca/blog-mistakes-to-avoid.html</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

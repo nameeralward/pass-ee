@@ -57,13 +57,13 @@ header {
 /* Fix navigation wrapping */
 header .header-content {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem; /* Reduce padding to give more space */
     flex-wrap: nowrap; /* Prevent wrapping */
     max-width: 1400px; /* Increase max width to accommodate all items */
     margin: 0 auto;
-    gap: 6rem; /* Add large gap between logo and navigation */
+    gap: 2rem; /* Reduce gap to save space */
 }
 
 .logo-container {
@@ -102,7 +102,7 @@ h1.site-name {
 nav {
     display: flex;
     align-items: center;
-    gap: 1.2rem; /* Reduce gap between nav items */
+    gap: 0.8rem; /* Further reduce gap between nav items */
     flex-wrap: nowrap; /* Prevent wrapping */
     white-space: nowrap; /* Prevent text wrapping within nav items */
 }
@@ -112,8 +112,8 @@ nav a, .dropdown > a {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
-    font-size: 0.95rem; /* Slightly reduce font size */
-    padding: 0.5rem 0.7rem; /* Add padding for better touch targets */
+    font-size: 0.9rem; /* Further reduce font size */
+    padding: 0.5rem 0.5rem; /* Reduce horizontal padding */
     border-radius: var(--border-radius);
 }
 
@@ -126,11 +126,13 @@ nav a:hover, .dropdown > a:hover {
 .questions-portal-btn {
     background: var(--cta-color) !important;
     color: white !important;
-    padding: 0.6rem 1.2rem !important;
+    padding: 0.5rem 1rem !important; /* Reduce padding */
     border-radius: 6px !important;
     font-weight: 600 !important;
-    margin-left: 1rem !important;
+    font-size: 0.85rem !important; /* Reduce font size */
+    margin-left: 0.5rem !important; /* Reduce margin */
     transition: all 0.3s ease !important;
+    flex-shrink: 0; /* Prevent button from shrinking */
 }
 
 .questions-portal-btn:hover {
@@ -635,6 +637,23 @@ footer {
 }
 
 /* Responsive adjustments */
+/* Add responsive handling for navigation */
+@media (max-width: 1200px) {
+    header .header-content {
+        padding: 1rem 1rem; /* Further reduce padding on smaller screens */
+        gap: 1rem; /* Reduce gap even more */
+    }
+    
+    nav {
+        gap: 0.5rem; /* Tighter spacing on smaller screens */
+    }
+    
+    .questions-portal-btn {
+        padding: 0.4rem 0.8rem !important; /* Even smaller button */
+        font-size: 0.8rem !important;
+    }
+}
+
 @media (max-width: 1024px) {
     .logo-container {
         flex-shrink: 1; /* Allow logo to shrink */
@@ -645,7 +664,7 @@ footer {
     }
     
     nav a, .dropdown > a {
-        font-size: 0.9rem; /* Further reduce font size */
+        font-size: 0.85rem; /* Further reduce font size */
         padding: 0.5rem 0.5rem; /* Reduce padding */
     }
 }
