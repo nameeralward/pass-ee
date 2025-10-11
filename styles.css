@@ -462,6 +462,13 @@ main {
     padding: 0 2rem;
 }
 
+@media (max-width: 768px) {
+    main {
+        padding: 0 1rem; /* Reduce from 2rem to 1rem for more text space */
+        margin: 1rem auto; /* Reduce top/bottom margin slightly */
+    }
+}
+
 .breadcrumb {
     margin-bottom: 2rem;
     color: var(--text-secondary);
@@ -672,7 +679,7 @@ footer {
 @media (max-width: 768px) {
     header .header-content {
         flex-direction: column;
-        padding: 1rem;
+        padding: 0.75rem; /* Reduce from 1rem to 0.75rem for consistency */
     }
     
     nav {
@@ -754,11 +761,11 @@ footer {
     .feature-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
-        padding: 1rem;
+        padding: 0.5rem; /* Reduce from 1rem to 0.5rem for more text space */
     }
 
     .feature-card {
-        padding: 1.5rem;
+        padding: 1.25rem; /* Slightly reduce from 1.5rem to 1.25rem */
     }
 
     .carousel-section {
@@ -797,7 +804,7 @@ footer {
     .footer-content {
         flex-direction: column;
         gap: 2rem;
-        padding: 2rem 1rem;
+        padding: 1.5rem 0.75rem; /* Reduce horizontal padding from 1rem to 0.75rem */
     }
 
     .footer-section {
@@ -827,7 +834,7 @@ footer {
     }
 
     .policy-section {
-        padding: 1rem;
+        padding: 0.75rem; /* Reduce from 1rem to 0.75rem for more text space */
     }
 
     .support-email {
@@ -835,7 +842,7 @@ footer {
     }
 
     .content-block {
-        padding: 1rem;
+        padding: 0.5rem; /* Reduce from 1rem to 0.5rem for more text space */
     }
 
     h2 {
@@ -844,7 +851,7 @@ footer {
     }
 
     .breadcrumb {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0.75rem; /* Reduce horizontal padding for consistency */
         font-size: 0.9rem;
     }
 
@@ -852,7 +859,7 @@ footer {
     .mobile-app-prompt {
         display: block;
         text-align: center;
-        padding: 2rem 1rem;
+        padding: 1.5rem 0.5rem; /* Reduce horizontal padding from 1rem to 0.5rem */
         background: var(--card-bg);
         border-radius: var(--border-radius);
         margin: 2rem 0;
@@ -872,6 +879,26 @@ footer {
 
 /* Additional adjustments for very small screens */
 @media (max-width: 380px) {
+    main {
+        padding: 0 0.75rem; /* Further reduce padding for very small screens */
+    }
+    
+    .policy-section {
+        padding: 0.5rem; /* Further reduce for very small screens */
+    }
+    
+    .content-block {
+        padding: 0.25rem; /* Minimal padding for very small screens */
+    }
+    
+    header .header-content {
+        padding: 0.5rem; /* Reduce header padding for very small screens */
+    }
+    
+    .footer-content {
+        padding: 1rem 0.5rem; /* Further reduce footer padding */
+    }
+    
     .site-name {
         font-size: 1.5rem;
     }
@@ -893,7 +920,6 @@ footer {
     }
 }
 
-/* Update feature card styles */
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1770,7 +1796,7 @@ footer {
 }
 
 .testimonial-card:before {
-    content: """;
+    content: "\201C"; /* Unicode for left double quotation mark */
     position: absolute;
     top: 1rem;
     left: 1rem;
@@ -2115,6 +2141,68 @@ footer {
     --purple-gradient: linear-gradient(135deg, #061148, #001464);
     --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     --line-height-body: 1.6;
+}
+
+/* Override hyperlink colors for qualifying exam page */
+.qualifying-exam-page a {
+    color: var(--cta-color); /* Use coral-pink for better contrast against purple */
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+.qualifying-exam-page a:hover {
+    color: var(--highlight-color); /* Use tea-rose-red on hover for subtle variation */
+    text-decoration: none;
+}
+
+/* Specific styling for hero section links to ensure visibility */
+.qualifying-exam-page .hero-section a {
+    color: var(--cta-color); /* Coral-pink for excellent contrast against purple */
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.qualifying-exam-page .hero-section a:hover {
+    color: var(--highlight-color); /* Tea-rose-red on hover */
+    text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure CTA buttons maintain their original styling */
+.qualifying-exam-page .cta-button {
+    color: white !important; /* Override the general link color for buttons */
+}
+
+.qualifying-exam-page .cta-button:hover {
+    color: var(--primary-color) !important; /* Override the general link hover color for buttons */
+}
+
+/* Ensure navigation links maintain their original styling */
+.qualifying-exam-page nav a,
+.qualifying-exam-page .mobile-nav a,
+.qualifying-exam-page .mobile-nav-item a,
+.qualifying-exam-page .mobile-nav-submenu a,
+.qualifying-exam-page .mobile-nav-mcq-link {
+    color: var(--dark-accent) !important; /* Keep navigation links dark */
+    text-decoration: none !important; /* Remove underlines from navigation */
+}
+
+.qualifying-exam-page nav a:hover,
+.qualifying-exam-page .mobile-nav a:hover,
+.qualifying-exam-page .mobile-nav-item a:hover,
+.qualifying-exam-page .mobile-nav-submenu a:hover,
+.qualifying-exam-page .mobile-nav-mcq-link:hover {
+    color: var(--accent-color) !important; /* Keep navigation hover purple */
+    text-decoration: none !important; /* Ensure no underlines on hover */
+}
+
+/* Ensure footer links maintain their original styling */
+.qualifying-exam-page footer a {
+    color: var(--accent-color) !important; /* Keep footer links teal/blue */
+}
+
+.qualifying-exam-page footer a:hover {
+    color: var(--cta-color) !important; /* Use coral-pink on hover for footer links */
 }
 
 .qualifying-exam-page body,
