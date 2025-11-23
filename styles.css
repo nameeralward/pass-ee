@@ -2110,11 +2110,7 @@ footer {
 .floating-mcq-button span {
     display: block;
     width: 100%;
-    white-space: nowrap;
-}
-
-.floating-mcq-button span:last-child {
-    margin-top: 2px;
+    line-height: 1.2;
 }
 
 .floating-mcq-button:hover {
@@ -2238,6 +2234,29 @@ footer {
 
 .floating-mcq-button:hover i {
     color: var(--accent-color);
+}
+
+/* Make floating button wider but thinner on mobile so sale popup appears more prominent */
+@media (max-width: 768px) {
+    .floating-mcq-button {
+        width: 120px;
+        padding: 6px 8px;
+        bottom: 15px;
+        left: 15px;
+        font-size: 0.7rem;
+        z-index: 500 !important; /* Much lower than sale popup (10000+) */
+        min-height: auto;
+    }
+    
+    .floating-mcq-button i {
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+    }
+    
+    .floating-mcq-button span {
+        font-size: 0.7rem;
+        line-height: 1.1;
+    }
 }
 
 /* Animations for dramatic effect */

@@ -1,0 +1,564 @@
+/* Sale Popup Styles - Using passEE Color Palette */
+:root {
+    --popup-primary: #0E1032;     /* oxford-blue */
+    --popup-secondary: #12193D;   /* space-cadet */
+    --popup-accent: #34B8C3;       /* verdigris - teal */
+    --popup-cta: #FAA056;          /* sandy-brown - orange */
+    --popup-bg: #FFFFFF;           /* white background */
+    --popup-card-bg: #F8F9FA;      /* light card background */
+    --popup-border: rgba(14, 16, 50, 0.2); /* subtle border */
+}
+
+.sale-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 16, 50, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.sale-popup-overlay.show {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sale-popup-container {
+    position: relative;
+    background: var(--popup-bg);
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 25px rgba(14, 16, 50, 0.2),
+                0 0 0 2px var(--popup-cta);
+    animation: slideUp 0.4s ease-out;
+    overflow: hidden;
+    border: 2px solid var(--popup-border);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.sale-popup-minimize {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--popup-card-bg);
+    border: 2px solid var(--popup-border);
+    color: var(--popup-primary);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.sale-popup-minimize:hover {
+    background: var(--popup-accent);
+    color: white;
+    border-color: var(--popup-accent);
+    transform: scale(1.1);
+}
+
+/* Minimized state */
+.sale-popup-overlay.minimized {
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+    pointer-events: none; /* Allow clicks to pass through overlay when minimized */
+    background: transparent; /* Remove dark overlay when minimized */
+    backdrop-filter: none; /* Remove blur when minimized */
+    z-index: 10000; /* Keep high z-index even when minimized */
+}
+
+.sale-popup-overlay.minimized .sale-popup-container {
+    pointer-events: auto; /* But allow clicks on the container itself */
+    box-shadow: 0 8px 25px rgba(14, 16, 50, 0.2),
+                0 0 0 2px var(--popup-cta);
+    z-index: 10001; /* Ensure it's above floating button */
+    position: relative;
+}
+
+.sale-popup-overlay.minimized .sale-popup-minimize {
+    display: none; /* Hide minimize button when minimized */
+}
+
+.sale-popup-overlay.minimized .sale-popup-container {
+    max-width: 350px;
+    width: auto;
+    animation: slideDown 0.3s ease-out;
+    cursor: pointer;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.sale-popup-overlay.minimized .sale-popup-content {
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sale-popup-overlay.minimized .sale-popup-header,
+.sale-popup-overlay.minimized .sale-savings,
+.sale-popup-overlay.minimized .sale-popup-cta {
+    display: none;
+}
+
+.sale-popup-overlay.minimized .sale-popup-header {
+    margin-bottom: 0;
+}
+
+.sale-popup-overlay.minimized .sale-popup-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.sale-popup-overlay.minimized .sale-badge {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-bottom: 0;
+}
+
+.sale-popup-overlay.minimized .sale-subtitle {
+    display: none;
+}
+
+/* Minimized bar content */
+.sale-minimized-content {
+    display: none;
+}
+
+.sale-popup-overlay.minimized .sale-minimized-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.sale-minimized-badge {
+    background: var(--popup-cta);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.sale-minimized-text-left {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--popup-primary);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.sale-minimized-text-right {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--popup-primary);
+    white-space: nowrap;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.sale-minimized-text-right i {
+    color: var(--popup-accent);
+    font-size: 18px;
+}
+
+.sale-minimized-expand {
+    margin-left: auto;
+    color: var(--popup-accent);
+    font-size: 18px;
+}
+
+.sale-popup-content {
+    padding: 40px 30px 30px;
+    text-align: center;
+}
+
+.sale-popup-header {
+    margin-bottom: 30px;
+}
+
+.sale-badge {
+    display: inline-block;
+    background: var(--popup-cta);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(250, 160, 86, 0.25);
+}
+
+.sale-popup-header h2 {
+    color: var(--popup-primary);
+    font-size: 48px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.sale-subtitle {
+    color: var(--popup-secondary);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.sale-savings {
+    background: var(--popup-card-bg);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 2px solid var(--popup-border);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.savings-item {
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.savings-item-3month {
+    background: var(--popup-bg);
+    border: 2px solid var(--popup-cta);
+    box-shadow: 0 4px 12px rgba(250, 160, 86, 0.15);
+}
+
+.savings-item-3month:hover {
+    border-color: var(--popup-cta);
+    box-shadow: 0 8px 25px rgba(250, 160, 86, 0.25);
+    transform: translateY(-2px);
+}
+
+.savings-item-6month {
+    background: var(--popup-bg);
+    border: 2px solid var(--popup-accent);
+    box-shadow: 0 4px 12px rgba(52, 184, 195, 0.15);
+}
+
+.savings-item-6month:hover {
+    border-color: var(--popup-accent);
+    box-shadow: 0 8px 25px rgba(52, 184, 195, 0.25);
+    transform: translateY(-2px);
+}
+
+.savings-plan {
+    color: var(--popup-primary);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.savings-item-3month .savings-plan {
+    color: var(--popup-cta);
+}
+
+.savings-item-6month .savings-plan {
+    color: var(--popup-accent);
+}
+
+.savings-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.original-price {
+    color: #6c757d;
+    font-size: 24px;
+    text-decoration: line-through;
+    font-weight: 400;
+}
+
+.discounted-price {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.savings-item-3month .discounted-price {
+    color: var(--popup-cta);
+}
+
+.savings-item-6month .discounted-price {
+    color: var(--popup-accent);
+}
+
+.savings-text {
+    font-size: 14px;
+    margin: 8px 0 0 0;
+    font-weight: 500;
+}
+
+.savings-item-3month .savings-text {
+    color: var(--popup-secondary);
+}
+
+.savings-item-6month .savings-text {
+    color: var(--popup-secondary);
+}
+
+.savings-text strong {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.savings-item-3month .savings-text strong {
+    color: var(--popup-cta);
+}
+
+.savings-item-6month .savings-text strong {
+    color: var(--popup-accent);
+}
+
+.sale-popup-cta {
+    margin-top: 25px;
+}
+
+.sale-cta-button {
+    display: inline-block;
+    background: var(--popup-cta);
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(250, 160, 86, 0.25);
+    margin-bottom: 15px;
+}
+
+.sale-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(250, 160, 86, 0.35);
+    background: #FF8C42;
+}
+
+.sale-note {
+    color: #6c757d;
+    font-size: 14px;
+    margin: 0;
+}
+
+.sale-note strong {
+    color: var(--popup-accent);
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .sale-popup-overlay {
+        padding: 15px;
+    }
+    
+    /* Expanded popup on mobile - should not stretch */
+    .sale-popup-overlay:not(.minimized) .sale-popup-container {
+        max-width: calc(100% - 30px);
+        width: calc(100% - 30px);
+        min-width: 280px;
+    }
+    
+    .sale-popup-container {
+        border-radius: 15px;
+    }
+    
+    .sale-popup-content {
+        padding: 25px 20px 20px;
+    }
+    
+    .sale-popup-header {
+        margin-bottom: 18px;
+    }
+    
+    .sale-badge {
+        margin-bottom: 10px;
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+    
+    .sale-popup-header h2 {
+        font-size: 32px;
+        margin: 6px 0;
+    }
+    
+    .sale-subtitle {
+        font-size: 14px;
+    }
+    
+    .sale-savings {
+        padding: 15px 12px;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+    
+    .savings-item {
+        padding: 12px;
+    }
+    
+    .savings-plan {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+    
+    .original-price {
+        font-size: 18px;
+    }
+    
+    .discounted-price {
+        font-size: 26px;
+    }
+    
+    .savings-text {
+        font-size: 13px;
+        margin: 6px 0 0 0;
+    }
+    
+    .savings-text strong {
+        font-size: 15px;
+    }
+    
+    .sale-popup-cta {
+        margin-top: 12px;
+    }
+    
+    .sale-cta-button {
+        padding: 12px 25px;
+        font-size: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 12px;
+    }
+    
+    .sale-note {
+        font-size: 13px;
+    }
+    
+    .sale-popup-minimize {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    
+    .sale-popup-overlay.minimized {
+        padding: 15px;
+        z-index: 10001; /* Ensure it's above floating button (999) */
+    }
+    
+    .sale-popup-overlay.minimized .sale-popup-container {
+        max-width: 100%;
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .sale-popup-overlay.minimized .sale-minimized-content {
+        flex-wrap: nowrap;
+        gap: 8px;
+        justify-content: space-between;
+    }
+    
+    .sale-minimized-text-left {
+        font-size: 14px;
+        flex-shrink: 0;
+    }
+    
+    .sale-minimized-text-right {
+        font-size: 14px;
+        margin-left: auto;
+    }
+    
+    .sale-minimized-text-right i {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sale-popup-content {
+        padding: 30px 15px 20px;
+    }
+    
+    .sale-popup-header h2 {
+        font-size: 32px;
+    }
+    
+    .sale-badge {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+    
+    .savings-amount {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .original-price {
+        font-size: 18px;
+    }
+    
+    .discounted-price {
+        font-size: 24px;
+    }
+}
+
