@@ -1,4 +1,5 @@
 /* Sale Popup Styles - Using passEE Color Palette */
+
 :root {
     --popup-primary: #0E1032;     /* oxford-blue */
     --popup-secondary: #12193D;   /* space-cadet */
@@ -102,26 +103,25 @@
 
 .sale-popup-overlay.minimized .sale-popup-container {
     pointer-events: auto; /* But allow clicks on the container itself */
-    box-shadow: 0 8px 25px rgba(14, 16, 50, 0.2),
-                0 0 0 2px var(--popup-cta);
+    background: var(--popup-cta); /* Orange background when minimized */
+    box-shadow: 0 8px 25px rgba(250, 160, 86, 0.3),
+                0 0 0 2px rgba(255, 255, 255, 0.3);
     z-index: 10001; /* Ensure it's above floating button */
     position: relative;
+    max-width: 500px;
+    width: auto;
+    min-width: 300px;
+    animation: slideDownFromBottom 0.4s ease-out;
+    cursor: pointer;
 }
 
 .sale-popup-overlay.minimized .sale-popup-minimize {
     display: none; /* Hide minimize button when minimized */
 }
 
-.sale-popup-overlay.minimized .sale-popup-container {
-    max-width: 350px;
-    width: auto;
-    animation: slideDown 0.3s ease-out;
-    cursor: pointer;
-}
-
-@keyframes slideDown {
+@keyframes slideDownFromBottom {
     from {
-        transform: translateY(-30px);
+        transform: translateY(100px);
         opacity: 0;
     }
     to {
@@ -131,10 +131,11 @@
 }
 
 .sale-popup-overlay.minimized .sale-popup-content {
-    padding: 20px 25px;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+    width: 100%;
 }
 
 .sale-popup-overlay.minimized .sale-popup-header,
@@ -177,39 +178,40 @@
 }
 
 .sale-minimized-badge {
-    background: var(--popup-cta);
-    color: #fff;
+    background: #fff; /* White background for badge */
+    color: var(--popup-cta); /* Orange text */
     padding: 6px 12px;
     border-radius: 20px;
     font-weight: 600;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     white-space: nowrap;
     flex-shrink: 0;
 }
 
 .sale-minimized-text-left {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-    color: var(--popup-primary);
+    color: #fff; /* White text */
     white-space: nowrap;
     flex-shrink: 0;
 }
 
 .sale-minimized-text-right {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    color: var(--popup-primary);
+    color: #fff; /* White text */
     white-space: nowrap;
     margin-left: auto;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+    flex-shrink: 0;
 }
 
 .sale-minimized-text-right i {
-    color: var(--popup-accent);
+    color: #fff; /* White icon */
     font-size: 18px;
 }
 
@@ -510,27 +512,39 @@
     .sale-popup-overlay.minimized .sale-popup-container {
         max-width: 100%;
         width: 100%;
-        min-width: auto;
+        min-width: 280px;
+    }
+    
+    .sale-popup-overlay.minimized .sale-popup-content {
+        padding: 12px 15px;
+        gap: 10px;
     }
     
     .sale-popup-overlay.minimized .sale-minimized-content {
         flex-wrap: nowrap;
         gap: 8px;
         justify-content: space-between;
+        width: 100%;
+    }
+    
+    .sale-minimized-badge {
+        font-size: 0.7rem;
+        padding: 5px 10px;
     }
     
     .sale-minimized-text-left {
-        font-size: 14px;
+        font-size: 13px;
         flex-shrink: 0;
     }
     
     .sale-minimized-text-right {
-        font-size: 14px;
+        font-size: 12px;
         margin-left: auto;
+        gap: 4px;
     }
     
     .sale-minimized-text-right i {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -561,4 +575,3 @@
         font-size: 24px;
     }
 }
-

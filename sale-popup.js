@@ -20,24 +20,28 @@ function initSalePopup() {
     
     // Wait for DOM to be ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', showSalePopup);
+        document.addEventListener('DOMContentLoaded', showSalePopupMinimized);
     } else {
         // Small delay to ensure smooth page load
-        setTimeout(showSalePopup, 500);
-    }
-    
-    // Check if popup was minimized previously
-    const wasMinimized = localStorage.getItem(POPUP_MINIMIZED_KEY);
-    if (wasMinimized === 'true') {
-        // Small delay to show expanded first, then minimize
-        setTimeout(() => {
-            minimizeSalePopup();
-        }, 100);
+        setTimeout(showSalePopupMinimized, 500);
     }
 }
 
 /**
- * Show the sale popup (expanded)
+ * Show the sale popup (minimized by default)
+ */
+function showSalePopupMinimized() {
+    const overlay = document.getElementById('sale-popup-overlay');
+    if (overlay) {
+        overlay.classList.add('show');
+        overlay.classList.add('minimized'); // Start minimized
+        document.body.style.overflow = ''; // Allow scrolling when minimized
+        localStorage.setItem(POPUP_MINIMIZED_KEY, 'true');
+    }
+}
+
+/**
+ * Show the sale popup (expanded) - for manual expansion
  */
 function showSalePopup() {
     const overlay = document.getElementById('sale-popup-overlay');
