@@ -1,0 +1,181 @@
+/* Free Trial Section Styles */
+
+.free-trial-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: rgba(250, 160, 86, 0.1);
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 2px solid rgba(250, 160, 86, 0.2);
+}
+
+.free-trial-content {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.free-trial-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #0E1032;
+    color: white;
+    padding: 0.75rem 4rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(14, 16, 50, 0.3);
+    min-width: 300px;
+    overflow: hidden;
+    gap: 0.5rem;
+}
+
+.free-trial-button .fas.fa-sparkles {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    pointer-events: none;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.free-trial-button .sparkle-1 {
+    top: 20%;
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.free-trial-button .sparkle-2 {
+    top: 15%;
+    right: 10%;
+    animation-delay: 0.5s;
+}
+
+.free-trial-button .sparkle-3 {
+    bottom: 20%;
+    left: 12%;
+    animation-delay: 1s;
+}
+
+.free-trial-button .sparkle-4 {
+    bottom: 15%;
+    right: 8%;
+    animation-delay: 1.5s;
+}
+
+.free-trial-button:hover {
+    background: #1a1d4a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(14, 16, 50, 0.4);
+}
+
+.free-trial-button:hover .fas.fa-sparkles {
+    color: rgba(255, 255, 255, 0.9);
+    animation-duration: 1.5s;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(0.8) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3) rotate(180deg);
+    }
+}
+
+.free-trial-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.free-trial-badge {
+    background: white;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(250, 160, 86, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Trial benefit items (same as free-trial-page.css) */
+.free-trial-badges .trial-benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #808080;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.free-trial-badges .trial-benefit-item:hover {
+    background: #6b6b6b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.free-trial-badges .trial-benefit-item i {
+    color: white;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.free-trial-badges .trial-benefit-item span {
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .free-trial-section {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .free-trial-button {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .free-trial-badges {
+        gap: 0.75rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .free-trial-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .free-trial-badges .trial-benefit-item {
+        padding: 0.5rem 0.875rem;
+    }
+    
+    .free-trial-badges .trial-benefit-item i {
+        font-size: 1rem;
+    }
+    
+    .free-trial-badges .trial-benefit-item span {
+        font-size: 0.8rem;
+    }
+}
+

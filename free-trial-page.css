@@ -1,0 +1,247 @@
+/* Free Trial Page Styles */
+
+.trial-benefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.trial-benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(52, 184, 195, 0.1);
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    border: 2px solid rgba(52, 184, 195, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.trial-benefit-item:hover {
+    background: rgba(52, 184, 195, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.trial-benefit-item i {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.trial-benefit-item span {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.platforms-section {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.platforms-section h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.platform-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.platform-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 3rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    min-width: 200px;
+    min-height: 200px;
+    border: 2px solid transparent;
+}
+
+.platform-button i {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.platform-button span {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.platform-button.apple {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.platform-button.apple:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.platform-button.apple i {
+    color: #000000;
+}
+
+.platform-button.google {
+    background: rgba(66, 133, 244, 0.1);
+    border-color: rgba(66, 133, 244, 0.2);
+}
+
+.platform-button.google:hover {
+    background: rgba(66, 133, 244, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(66, 133, 244, 0.2);
+}
+
+.platform-button.google i {
+    color: #4285F4;
+}
+
+.platform-button.web {
+    background: rgba(52, 184, 195, 0.1);
+    border-color: rgba(52, 184, 195, 0.2);
+}
+
+.platform-button.web:hover {
+    background: rgba(52, 184, 195, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(52, 184, 195, 0.2);
+}
+
+.platform-button.web i {
+    color: var(--accent-color);
+}
+
+.guide-section {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.guide-section h3 {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.guide-image-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    border-radius: var(--border-radius);
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .trial-benefits {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1.5rem 0;
+        max-width: 100%;
+    }
+    
+    .trial-benefit-item {
+        width: 100%;
+        justify-content: center;
+        padding: 0.875rem 1.25rem;
+    }
+    
+    .trial-benefit-item i {
+        font-size: 1.3rem;
+    }
+    
+    .trial-benefit-item span {
+        font-size: 0.95rem;
+    }
+    
+    .platforms-section {
+        margin: 2rem 0;
+    }
+    
+    .platforms-section h3 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .platform-buttons {
+        flex-direction: row;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        justify-content: center;
+    }
+    
+    .platform-button {
+        flex: 1;
+        min-width: 0;
+        max-width: 150px;
+        padding: 1rem 0.75rem;
+        min-height: 150px;
+        height: 100%;
+    }
+    
+    .platform-button i {
+        font-size: 1.8rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .platform-button span {
+        font-size: 0.85rem;
+    }
+    
+    .guide-section {
+        margin: 2rem 0;
+    }
+    
+    .guide-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .guide-image-container {
+        padding: 0.5rem;
+    }
+    
+    .guide-image {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+

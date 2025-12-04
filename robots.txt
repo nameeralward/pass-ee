@@ -6,6 +6,12 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 
+# Block non-existent search pages
+Disallow: /search
+
+# Preferred domain (HTTPS, non-www)
+# Ensure all redirects point to https://pass-ee.ca/
+
 # Sitemaps
 Sitemap: https://pass-ee.ca/sitemap.xml
 Sitemap: https://pass-ee.ca/blog-sitemap.xml 

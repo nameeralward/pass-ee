@@ -859,7 +859,7 @@ footer {
     .mobile-app-prompt {
         display: block;
         text-align: center;
-        padding: 1.5rem 0.5rem; /* Reduce horizontal padding from 1rem to 0.5rem */
+        padding: 1.5rem 1rem; /* Match free trial spacing */
         background: var(--card-bg);
         border-radius: var(--border-radius);
         margin: 2rem 0;
@@ -2823,20 +2823,150 @@ footer {
 
 .app-store-buttons {
     display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .app-store-buttons .cta-button {
-    min-width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    flex: 1 1 auto;
+    min-width: 240px;
+    max-width: 320px;
+    min-height: 80px;
+    border: 2px solid transparent;
+}
+
+.app-store-buttons .cta-button i {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.app-store-buttons .cta-button span {
+    color: var(--text-primary);
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Apple App Store buttons */
+.app-store-buttons .cta-button[href*="apps.apple.com"] {
+    background: #f5f5f5;
+    border-color: rgba(0, 0, 0, 0.2);
+    color: var(--text-primary);
+}
+
+.app-store-buttons .cta-button[href*="apps.apple.com"]:hover {
+    background: #e8e8e8;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.app-store-buttons .cta-button[href*="apps.apple.com"] i {
+    color: #000000;
+}
+
+/* Google Play Store buttons */
+.app-store-buttons .cta-button[href*="play.google.com"] {
+    background: #e8f0fe;
+    border-color: rgba(66, 133, 244, 0.3);
+    color: var(--text-primary);
+}
+
+.app-store-buttons .cta-button[href*="play.google.com"]:hover {
+    background: #d2e3fc;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(66, 133, 244, 0.2);
+}
+
+.app-store-buttons .cta-button[href*="play.google.com"] i {
+    color: #4285F4;
+}
+
+/* Web app buttons */
+.app-store-buttons .cta-button[href*="app.pass-ee.ca"] {
+    background: #e0f7fa;
+    border-color: rgba(52, 184, 195, 0.3);
+    color: var(--text-primary);
+}
+
+.app-store-buttons .cta-button[href*="app.pass-ee.ca"]:hover {
+    background: #b2ebf2;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(52, 184, 195, 0.2);
+}
+
+.app-store-buttons .cta-button[href*="app.pass-ee.ca"] i {
+    color: var(--accent-color);
+}
+
+/* When app-store-buttons is inside FAQ items on desktop, break out of faq-item padding */
+.faq-item .app-store-buttons,
+.faq-answer .app-store-buttons {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 @media (max-width: 768px) {
     .app-store-buttons {
         flex-direction: column;
-        align-items: stretch;
+        max-width: 100%;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* When app-store-buttons is inside content-block, break out of content-block padding to match free-trial spacing */
+    .content-block .app-store-buttons,
+    .cta-button-container.app-store-buttons {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    /* When app-store-buttons is inside FAQ items, break out of faq-item padding */
+    .faq-item .app-store-buttons,
+    .faq-answer .app-store-buttons {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .app-store-buttons .cta-button {
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 100%;
+        padding: 0.75rem 1rem;
+        min-height: 60px;
+        justify-content: center;
+    }
+    
+    .app-store-buttons .cta-button i {
+        font-size: 1.4rem;
+    }
+    
+    .app-store-buttons .cta-button span {
+        font-size: 0.85rem;
+        white-space: nowrap;
     }
 }
 
