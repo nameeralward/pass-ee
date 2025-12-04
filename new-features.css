@@ -7,6 +7,7 @@
     margin: 2rem 0;
     box-shadow: var(--box-shadow);
     border: 1px solid rgba(14, 16, 50, 0.1);
+    position: relative;
 }
 
 .new-features-section {
@@ -17,6 +18,22 @@
 .new-features-header {
     text-align: center;
     margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.news-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--cta-color);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 10;
+    line-height: 1.2;
 }
 
 .new-features-header h2 {
@@ -284,6 +301,13 @@
     
     .new-features-header .check-it-out {
         font-size: 1rem;
+    }
+    
+    .news-badge {
+        font-size: 10px;
+        padding: 4px 8px;
+        top: 8px;
+        left: 8px;
     }
     
     .new-features-grid {

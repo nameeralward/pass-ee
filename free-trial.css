@@ -3,10 +3,10 @@
 .free-trial-section {
     margin: 2rem 0;
     padding: 2rem;
-    background: rgba(250, 160, 86, 0.1);
+    background: #f5f5f5;
     border-radius: var(--border-radius);
     text-align: center;
-    border: 2px solid rgba(250, 160, 86, 0.2);
+    border: 2px solid #e8e8e8;
 }
 
 .free-trial-content {
@@ -114,29 +114,29 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background: #808080;
+    background: #f5f5f5;
     padding: 0.6rem 1rem;
     border-radius: 20px;
     border: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     white-space: nowrap;
 }
 
 .free-trial-badges .trial-benefit-item:hover {
-    background: #6b6b6b;
+    background: #e8e8e8;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .free-trial-badges .trial-benefit-item i {
-    color: white;
+    color: #666666;
     font-size: 1.1rem;
     flex-shrink: 0;
 }
 
 .free-trial-badges .trial-benefit-item span {
-    color: white;
+    color: #666666;
     font-weight: 600;
     font-size: 0.85rem;
 }
