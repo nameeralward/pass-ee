@@ -3,6 +3,7 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "passEE",
+  "alternateName": ["passee", "pass-ee", "pass-EE", "pass ee", "pass EE"],
   "url": "https://pass-ee.ca/"
 }
 </script> 
