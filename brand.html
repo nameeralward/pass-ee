@@ -34,6 +34,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.webp">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.webp">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="language-switcher.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Theme Color -->
@@ -153,6 +154,8 @@
       ]
     }
     </script>
+    <!-- Language Switcher -->
+    <script src="language-switcher.js" defer></script>
 </head>
 <body>
     <div class="top-bar">
@@ -179,23 +182,16 @@
             
             <nav>
                 <a href="/">Home</a>
-                <a href="pebc-ee-guide.html">PEBC EE Guide</a>
+                <a href="pebc-ee-guide.html">Guide</a>
                 <a href="subscription.html">Subscription</a>
                 <a href="promotions.html">Promotions</a>
                 <a href="support.html">Support</a>
                 <a href="faq.html">FAQ</a>
                 <a href="blog-index.html">Blog</a>
                 <a href="about.html">About Us</a>
-                <div class="dropdown">
-                    <a href="#">Policies</a>
-                    <div class="dropdown-content">
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                        <a href="terms-of-service.html">Terms of Service</a>
-                        <a href="device-switching.html">Device Switching</a>
-                    </div>
-                </div>
-                <a href="https://app.pass-ee.ca" class="questions-portal-btn">
-                    <i class="fas fa-external-link-alt"></i> Questions Portal
+                <a href="policies.html">Policies</a>
+                <a href="https://app.pass-ee.ca" class="portal-btn">
+                    <i class="fas fa-external-link-alt"></i> Portal
                 </a>
             </nav>
         </div>
@@ -216,7 +212,7 @@
                     <a href="/">Home</a>
                 </div>
                 <div class="mobile-nav-item">
-                    <a href="pebc-ee-guide.html">PEBC EE Guide</a>
+                    <a href="pebc-ee-guide.html">Guide</a>
                 </div>
                 <div class="mobile-nav-item">
                     <a href="subscription.html">Subscription</a>
@@ -236,24 +232,17 @@
                 <div class="mobile-nav-item">
                     <a href="about.html">About Us</a>
                 </div>
-                <div class="mobile-nav-item">
-                    <div class="mobile-nav-dropdown">
-                        <a href="#">Policies</a>
-                        <button class="mobile-dropdown-toggle">
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                    </div>
-                    <div class="mobile-nav-submenu">
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                        <a href="terms-of-service.html">Terms of Service</a>
-                        <a href="device-switching.html">Device Switching</a>
-                    </div>
+                                <div class="mobile-nav-item">
+                    <a href="policies.html">Policies</a>
                 </div>
                 <div class="mobile-nav-item">
                     <a href="https://app.pass-ee.ca" class="mobile-nav-portal-link">
                         <i class="fas fa-external-link-alt"></i>
-                        Questions Portal
+                        Portal
                     </a>
+                </div>
+                <div class="mobile-nav-item mobile-nav-language-switcher" id="mobile-language-switcher">
+                    <!-- Language switcher will be inserted here by language-switcher.js -->
                 </div>
             </div>
         </div>
@@ -341,7 +330,7 @@
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="pebc-ee-guide.html">PEBC EE Guide</a></li>
+                    <li><a href="pebc-ee-guide.html">Guide</a></li>
                     <li><a href="subscription.html">Subscription</a></li>
                     <li><a href="blog-index.html">Blog</a></li>
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
@@ -352,11 +341,12 @@
                 <h4>Contact</h4>
                 <ul>
                     <li><a href="mailto:support@npd-pass.com"><i class="fas fa-envelope"></i> Contact Us</a></li>
-                </ul>
+                    <li style="color: white;">Cambridge, Ontario, Canada</li>
+</ul>
             </div>
         </div>
         <div class="copyright">
-            © 2025 passEE. All rights reserved. passEE is not affiliated with the Pharmacy Examining Board of Canada. "PEBC" and "Pharmacy Examining Board of Canada" are trademarks of the Pharmacy Examining Board of Canada.
+            © 2026 passEE. All rights reserved. passEE is not affiliated with the Pharmacy Examining Board of Canada. "PEBC" and "Pharmacy Examining Board of Canada" are trademarks of the Pharmacy Examining Board of Canada.
         </div>
     </footer>
 

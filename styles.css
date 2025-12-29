@@ -5,6 +5,7 @@
     --accent-color: #34B8C3;      /* verdigris - bright teal for accents */
     --dark-accent: #0E1032;       /* oxford-blue - for text */
     --cta-color: #FAA056;         /* sandy-brown - warm orange for CTAs */
+    --cta-hover: #FFB366;         /* lighter orange for CTA hover state */
     
     /* UI colors with better contrast */
     --background: #FFFFFF;
@@ -135,7 +136,26 @@ nav a:hover, .dropdown > a:hover {
     flex-shrink: 0; /* Prevent button from shrinking */
 }
 
+.portal-btn {
+    background: var(--cta-color) !important;
+    color: white !important;
+    padding: 0.5rem 1rem !important; /* Reduce padding */
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important; /* Reduce font size */
+    margin-left: 0.5rem !important; /* Reduce margin */
+    transition: all 0.3s ease !important;
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
 .questions-portal-btn:hover {
+    background: var(--cta-hover) !important;
+    color: black !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(204, 51, 36, 0.3) !important;
+}
+
+.portal-btn:hover {
     background: var(--cta-hover) !important;
     color: black !important;
     transform: translateY(-2px) !important;

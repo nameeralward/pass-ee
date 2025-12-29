@@ -1,0 +1,185 @@
+/**
+ * Language Switcher Styles
+ * Custom styling for the language switcher component
+ */
+
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    z-index: 1000;
+    margin-left: 0.5rem;
+    flex-shrink: 0; /* Prevent language switcher from shrinking */
+}
+
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.8rem; /* Slightly reduce padding */
+    background: transparent;
+    border: 1px solid rgba(133, 92, 166, 0.3);
+    border-radius: 6px;
+    color: var(--text-primary, #333);
+    font-size: 0.8rem; /* Slightly smaller to fit better */
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    white-space: nowrap;
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.lang-btn:hover {
+    background: rgba(133, 92, 166, 0.1);
+    border-color: var(--accent-color, #855CA6);
+    transform: translateY(-2px);
+}
+
+
+
+/* Hide Google Translate default UI - Aggressive hiding */
+#google_translate_element {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+}
+
+/* Hide all Google Translate UI elements */
+.goog-te-banner-frame,
+.goog-te-menu-frame,
+.goog-te-banner,
+.goog-te-ftab,
+.goog-te-gadget,
+.goog-te-gadget-simple,
+span.goog-te-gadget-icon,
+.goog-te-combo,
+iframe[src*="translate.googleapis.com"],
+iframe[src*="translate.google.com"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Hide any Google Translate banner or notification */
+body > .goog-te-banner-frame,
+body > .skiptranslate,
+body > iframe[src*="translate"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Hide any elements with Google Translate classes at the top level */
+body > div[class*="goog"],
+body > div[class*="skiptranslate"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Ensure language switcher is not translated */
+.language-switcher,
+.language-switcher * {
+    -webkit-translate: no !important;
+    translate: no !important;
+}
+
+/* Ensure proper alignment within nav */
+nav .language-switcher {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .language-switcher {
+        margin-left: 0;
+        margin-right: auto;
+        padding: 0.25rem;
+    }
+    
+    nav .language-switcher {
+        margin-left: 0.5rem;
+    }
+    
+    .lang-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Ensure switcher is visible in header */
+header .language-switcher {
+    position: relative;
+}
+
+/* Dark mode support (if you have it) */
+@media (prefers-color-scheme: dark) {
+    .lang-btn {
+        color: var(--text-primary, #fff);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .lang-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Mobile navigation language switcher */
+.mobile-nav-language-switcher {
+    margin-top: auto;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-top: 1px solid rgba(133, 92, 166, 0.2);
+    margin-bottom: 1rem;
+}
+
+.mobile-lang-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+    background: transparent;
+    border: 1px solid rgba(133, 92, 166, 0.3);
+    border-radius: 6px;
+    color: var(--text-primary, #333);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.mobile-lang-btn:hover,
+.mobile-lang-btn:active {
+    background: rgba(133, 92, 166, 0.1);
+    border-color: var(--accent-color, #855CA6);
+}
+
+.mobile-lang-btn i {
+    font-size: 1rem;
+}
+
