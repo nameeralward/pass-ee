@@ -39,12 +39,12 @@
 
 .floating-mcq-button {
     left: 20px;
-    bottom: 20px;
+    bottom: calc(20px + 75px);
 }
 
 .floating-news-button {
     left: 20px;
-    bottom: calc(20px + 75px);
+    bottom: 20px;
     background-color: var(--accent-color);
     color: #ffffff;
 }
@@ -136,12 +136,12 @@
 
     .floating-mcq-button {
         left: 15px;
-        bottom: 15px;
+        bottom: calc(15px + 70px);
     }
 
     .floating-news-button {
         left: 15px;
-        bottom: calc(15px + 70px);
+        bottom: 15px;
     }
 
     .floating-news-button .floating-news-close {
