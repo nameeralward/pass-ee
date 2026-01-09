@@ -25,6 +25,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.webp">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.webp">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="floating-cta.css">
     <link rel="stylesheet" href="language-switcher.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -250,6 +251,7 @@
                 <a href="support.html">Support</a>
                 <a href="faq.html">FAQ</a>
                 <a href="blog-index.html">Blog</a>
+                <a href="news.html">News</a>
                 <a href="about.html">About Us</a>
                 <a href="policies.html">Policies</a>
                 <a href="https://app.pass-ee.ca" class="portal-btn">
@@ -797,13 +799,25 @@
             © 2026 passEE. All rights reserved. passEE is not affiliated with the Pharmacy Examining Board of Canada. "PEBC" and "Pharmacy Examining Board of Canada" are trademarks of the Pharmacy Examining Board of Canada.
         </div>
     </footer>
-    <!-- Floating button for passMCQ -->
-    <a href="qualifying-exam.html" class="floating-mcq-button">
-        <i class="fas fa-graduation-cap"></i>
-        Passed EE? Get passMCQ
-    </a>
+    <div class="floating-cta-stack">
+        <!-- Floating button linking to News -->
+        <a href="news.html" class="floating-news-button">
+            <span class="floating-news-close" aria-label="Dismiss Latest News">×</span>
+            <i class="fas fa-newspaper"></i>
+            <span>Latest</span>
+            <span>News</span>
+        </a>
+
+        <!-- Floating button for passMCQ -->
+        <a href="qualifying-exam.html" class="floating-mcq-button">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Passed EE?</span>
+            <span>Get passMCQ</span>
+        </a>
+    </div>
     
     <script src="mobile-nav.js"></script>
+<script src="latest-news-dismiss.js"></script>
 </body>
 </html>
 

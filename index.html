@@ -42,6 +42,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.webp">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.webp">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="floating-cta.css">
     <link rel="stylesheet" href="language-switcher.css">
     <link rel="stylesheet" href="stats-cards.css">
     <link rel="stylesheet" href="new-features.css">
@@ -400,6 +401,7 @@
                 <a href="support.html">Support</a>
                 <a href="faq.html">FAQ</a>
                 <a href="blog-index.html">Blog</a>
+                <a href="news.html">News</a>
                 <a href="about.html">About Us</a>
                 <a href="policies.html">Policies</a>
                 <a href="https://app.pass-ee.ca" class="portal-btn">
@@ -440,6 +442,9 @@
                 </div>
                 <div class="mobile-nav-item">
                     <a href="blog-index.html">Blog</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="news.html">News</a>
                 </div>
                 <div class="mobile-nav-item">
                     <a href="about.html">About Us</a>
@@ -495,75 +500,6 @@
                         <span>No obligation</span>
                     </div>
                 </div>
-            </div>
-            
-            <!-- New Features Section -->
-            <div class="new-features-wrapper">
-                <span class="news-badge">UPDATE</span>
-                <div class="new-features-section">
-                    <div class="new-features-header">
-                        <h2><i class="fas fa-sparkles"></i> Exciting News! We've Enhanced Our Platform with Amazing New Features!</h2>
-                        <h3 class="version-text">version 2.0</h3>
-                        <p class="check-it-out">Discover what's new and take your preparation to the next level!</p>
-                    </div>
-                    
-                    <div class="new-features-grid">
-                    <!-- Study Together Feature -->
-                    <div class="new-feature-card study-together">
-                        <span class="new-feature-badge">NEW</span>
-                        <div class="feature-icon">
-                            <div class="study-together-icon">
-                                <i class="fas fa-user"></i>
-                                <i class="fas fa-user"></i>
-                                <i class="fas fa-user"></i>
-                            </div>
-                        </div>
-                        <h3>Study Together</h3>
-                        <ul class="feature-list">
-                            <li>Call with friends to study together in real-time</li>
-                            <li>Join call rooms with up to 4 people to discuss questions</li>
-                            <li>Solve quiz questions together while on a call</li>
-                            <li>Share your screen and walk through solutions together</li>
-                            <li>Get instant help from study partners when you're stuck</li>
-                        </ul>
-                        <a href="blog-study-together.html" class="feature-blog-link">
-                            <i class="fas fa-book-reader"></i> Learn More About StudyTogether
-                        </a>
-                    </div>
-                    
-                    <!-- Play Music Feature -->
-                    <div class="new-feature-card music">
-                        <span class="new-feature-badge">NEW</span>
-                        <div class="feature-icon">
-                            <i class="fas fa-music"></i>
-                        </div>
-                        <h3>Play Music</h3>
-                        <ul class="feature-list">
-                            <li>Boost concentration with scientifically proven study music</li>
-                            <li>Enhance focus with curated classical playlists</li>
-                            <li>Improve memory and cognitive performance</li>
-                            <li>Reduce distractions and create the perfect study atmosphere</li>
-                            <li>Access premium playlists designed for optimal learning</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Communications Feature -->
-                    <div class="new-feature-card communications">
-                        <span class="new-feature-badge">NEW</span>
-                        <div class="feature-icon">
-                            <i class="fas fa-bell"></i>
-                        </div>
-                        <h3>Communications</h3>
-                        <ul class="feature-list">
-                            <li>Get instant responses from our expert team</li>
-                            <li>Stay informed with important updates and announcements</li>
-                            <li>Receive personalized help when you need it most</li>
-                            <li>Submit questions and get detailed explanations</li>
-                            <li>Connect directly with the passEE support team</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
             </div>
             
             <!-- Statistics Card -->
@@ -918,15 +854,27 @@
 
     <script src="carousel.js"></script>
     
-    <!-- Floating button for passMCQ -->
-    <a href="qualifying-exam.html" class="floating-mcq-button">
-        <i class="fas fa-graduation-cap"></i>
-        <span>Passed EE?<br>Get passMCQ</span>
-    </a>
+    <div class="floating-cta-stack">
+        <!-- Floating button linking to News -->
+        <a href="news.html" class="floating-news-button">
+            <span class="floating-news-close" aria-label="Dismiss Latest News">×</span>
+            <i class="fas fa-newspaper"></i>
+            <span>Latest</span>
+            <span>News</span>
+        </a>
+
+        <!-- Floating button for passMCQ -->
+        <a href="qualifying-exam.html" class="floating-mcq-button">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Passed EE?</span>
+            <span>Get passMCQ</span>
+        </a>
+    </div>
     
     <script src="mobile-nav.js"></script>
     
     <!-- Add the analytics events script -->
     <script src="analytics-events.js"></script>
+<script src="latest-news-dismiss.js"></script>
 </body>
 </html>
