@@ -67,19 +67,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pass-ee.ca/privacy-policy.html</loc>
+    <loc>https://npd-pass.com/#privacy</loc>
     <lastmod>2025-12-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pass-ee.ca/terms-of-service.html</loc>
+    <loc>https://npd-pass.com/#terms</loc>
     <lastmod>2025-12-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pass-ee.ca/device-switching.html</loc>
+    <loc>https://npd-pass.com/#device-switching</loc>
     <lastmod>2025-12-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
