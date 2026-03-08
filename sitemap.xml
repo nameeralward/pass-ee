@@ -49,6 +49,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://pass-ee.ca/news-installments.html</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pass-ee.ca/about.html</loc>
     <lastmod>2025-12-05</lastmod>
     <changefreq>monthly</changefreq>
